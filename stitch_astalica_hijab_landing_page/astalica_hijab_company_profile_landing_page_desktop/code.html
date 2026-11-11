@@ -1,0 +1,686 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#fcf9f8", "on-secondary-container": "#496a57", "surface-container-low": "#f6f3f2", "secondary-container": "#c4e8d1", "on-error-container": "#93000a", "on-secondary-fixed-variant": "#2d4d3c", "surface-variant": "#e5e2e1", "on-secondary-fixed": "#002113", "inverse-primary": "#e9c176", "on-secondary": "#ffffff", "primary-fixed-dim": "#e9c176", "on-primary-fixed": "#261900", "surface-bright": "#fcf9f8", "inverse-surface": "#313030", "tertiary-fixed": "#ece2cc", "on-error": "#ffffff", "background": "#fcf9f8", "error-container": "#ffdad6", "surface-tint": "#775a19", "on-tertiary-fixed": "#201b0e", "tertiary-container": "#ada591", "outline-variant": "#d1c5b4", "outline": "#7f7667", "on-background": "#1c1b1b", "on-primary-fixed-variant": "#5d4201", "secondary-fixed": "#c7ebd4", "secondary-fixed-dim": "#abcfb8", "on-tertiary": "#ffffff", "surface-container-high": "#eae7e7", "tertiary-fixed-dim": "#cfc6b0", "primary-container": "#c5a059", "on-tertiary-container": "#403b2b", "surface-container": "#f0eded", "on-primary": "#ffffff", "primary-fixed": "#ffdea5", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "surface-container-highest": "#e5e2e1", "primary": "#775a19", "secondary": "#456553", "tertiary": "#655e4d", "surface-dim": "#dcd9d9", "on-primary-container": "#4e3700", "inverse-on-surface": "#f3f0ef", "on-tertiary-fixed-variant": "#4c4636", "on-surface": "#1c1b1b", "on-surface-variant": "#4e4639" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "3rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem" }, "fontFamily": { "display-lg": [ "Playfair Display" ], "display-md": [ "Playfair Display" ], "label-sm": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Playfair Display" ], "label-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Playfair Display" ], "title-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Playfair Display" ], "body-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "display-md-mobile": [ "Playfair Display" ], "label-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-lg": [ "56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-md": [ "44px", { "lineHeight": "54px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "display-lg-mobile": [ "38px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "headline-md": [ "26px", { "lineHeight": "34px", "fontWeight": "500" } ], "display-md-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(27,59,43,0.04)]"><div class="h-20 max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Astalica Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrB1aepAKTrZP6swu-2zDI0udz3fUagaPak8yjFL_w9imZyKosTLoKjs_3YVQB-cuWQs4pKGyJcGvoV48VgZ83Eo2oKyAAoWpGB_xzEyBeBXX-4laWjF3Jpnk5mcD8qWxBQN9ZZX0HPXKDSd8COTn-Nta-dE-0ybepPBKgdmwmDKWPLfy6miWbUSLe8cOrMsrTH70nG2r3D4fX10EXC16WzR0fdrze7MGuZ9jUcgucNgsQ"><span class="font-display-md text-title-lg text-primary tracking-wide hidden sm:inline">Astalica</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors tracking-wide text-primary font-bold" data-path="beranda" href="#">Beranda</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors tracking-wide" data-path="tentang-kami" href="#">Tentang Kami</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors tracking-wide" data-path="layanan-solusi" href="#">Layanan &amp; Solusi</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors tracking-wide" data-path="warta-tren" href="#">Warta &amp; Tren</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors tracking-wide" data-path="hubungi-kami" href="#">Hubungi Kami</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-lg py-space-sm font-label-md text-label-md text-primary bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container transition-all tracking-wider uppercase rounded-full" data-path="masuk" href="#">Masuk / Akun</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl lg:py-28">
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-40 w-[30rem] h-[30rem] rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-gutter items-center">
+<!-- Hero Text Content -->
+<div class="lg:col-span-6 flex flex-col items-start z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-primary mb-space-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Haute Modesty Atelier • Indonesia</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-surface tracking-tight leading-tight mb-space-md">
+            Kemurnian Anggun, <br>
+<span class="italic font-normal text-primary">Kemewahan Modest</span> Indonesia
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-xl leading-relaxed">
+            Menghadirkan koleksi hijab sutra premium dan busana santun berkelas haute couture dengan sentuhan mahakarya tekstil nusantara dan kenyamanan tanpa kompromi.
+          </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md w-full sm:w-auto">
+<a class="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg shadow-[0_8px_24px_rgba(119,90,25,0.28)] hover:shadow-[0_12px_32px_rgba(119,90,25,0.4)] hover:-translate-y-0.5 transition-all rounded-full" href="#layanan">
+              Jelajahi Koleksi Eksklusif
+              <span class="material-symbols-outlined ml-2 text-base">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-8 py-3.5 bg-surface-container-low text-secondary hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg shadow-sm hover:-translate-y-0.5 transition-all rounded-full" href="#kontak">
+              Konsultasi Gaya Pribadi
+              <span class="material-symbols-outlined ml-2 text-base">event</span>
+</a>
+</div>
+<!-- Micro Credibility Indicators -->
+<div class="grid grid-cols-3 gap-space-md pt-space-xl mt-space-lg w-full">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">100%</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Mulberry Silk</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">12+</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Atelier Butik</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">4.9/5</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Kepuasan VIP</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual Element with Floating Glass Badges -->
+<div class="lg:col-span-6 relative mt-space-lg lg:mt-0">
+<div class="relative mx-auto max-w-lg lg:max-w-none">
+<!-- Glow backdrop -->
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary/10 via-primary/15 to-transparent rounded-2xl transform rotate-1 scale-95 blur-md"></div>
+<!-- Hero Image Container with 4:5 portrait ratio -->
+<div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] bg-surface-container-low">
+<img class="w-full h-full object-cover object-center" data-alt="A portrait of an elegant Indonesian modest woman wearing a bespoke champagne gold silk hijab with tailored emerald green blazer dress inside a minimalist warm stone luxury architectural pavilion, bathed in gentle natural morning lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0wPrXkvcgwV4rOGJeLscJFQYWMKIHD8jFqVQErN0OiusZNkmH17dcn9d-06Frua5RFW2p6H76Kr2QmipOKFF5IVLvuJt7OSVxa0k3HqhbBb3Z7Hewkvoc6KH--ySiJAAGpmadQHjUbYc64uUoiMUOPSUMLwXXXCQLdcbAUfRdcvT2BTx32JdeWKgR3UG6RkFYv65kKgWba08gtn4JQFnEPxuVCM_CPgskUgx4cB0V">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 via-transparent to-transparent"></div>
+</div>
+<!-- Floating Badge 1: Top Left -->
+<div class="absolute -top-4 -left-4 sm:top-6 sm:-left-8 bg-surface/90 backdrop-blur-md px-4 py-3 shadow-xl flex items-center gap-3 rounded-full">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">diamond</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">100% Pure Mulberry Silk</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Grade 6A Sutra Murni</span>
+</div>
+</div>
+<!-- Floating Badge 2: Middle Right -->
+<div class="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 bg-surface/90 backdrop-blur-md px-4 py-3 shadow-xl flex items-center gap-3 rounded-full">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Handcrafted Embroidery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bordir Monogram Artisan</span>
+</div>
+</div>
+<!-- Floating Badge 3: Bottom Left -->
+<div class="absolute -bottom-4 left-6 sm:bottom-8 sm:-left-6 bg-surface/90 backdrop-blur-md px-4 py-3 shadow-xl flex items-center gap-3 rounded-full">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Tersedia di 12 Butik</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jakarta, Bandung, Surabaya</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MARQUEE LUXURY TICKER -->
+<div class="w-full bg-surface-container-low py-space-md overflow-hidden">
+<div class="flex items-center justify-around gap-8 text-on-surface-variant opacity-85 whitespace-nowrap overflow-x-auto no-scrollbar px-gutter-mobile">
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Pure Organic Silk</span>
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Laser Cut Hand-Finished</span>
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Royal Color Harmony</span>
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Private Concierge Service</span>
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Indonesian Heritage Wastra</span>
+</div>
+</div>
+<!-- ABOUT SECTION -->
+<section class="w-full py-24 bg-surface" id="tentang-kami">
+<div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center mb-space-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.25em] font-bold mb-2">TENTANG KAMI • FILOSOFI ASTALICA</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-display-md text-on-surface max-w-2xl leading-tight">
+          Menghidupkan Kemegahan Adibusana Santun
+        </h2>
+<div class="w-12 h-0.5 bg-primary mt-4"></div>
+</div>
+<!-- Content Split Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center mb-space-xl">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed font-normal">
+            Lahir dari penghormatan mendalam terhadap keanggunan perempuan berhijab, <strong class="font-semibold text-primary">Astalica</strong> memadukan tradisi tenun mulia Nusantara dengan estetika kontemporer adibusana internasional. Kami percaya bahwa berbusana santun adalah bentuk tertinggi dari rasa percaya diri, martabat, dan rasa syukur.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Setiap jalinan serat tidak sekadar dirancang untuk menutupi, melainkan untuk membingkai ekspresi jiwa dengan kelembutan yang menyentuh hati. Melalui proses kurasi bahan bersertifikat dan tangan-tangan terampil para perajin lokal, kami mempersembahkan karya yang melintasi tren zaman.
+          </p>
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex items-start gap-4 mt-2">
+<span class="material-symbols-outlined text-primary text-[28px] shrink-0 mt-1">format_quote</span>
+<blockquote class="font-display-md text-title-lg italic text-on-surface">
+              "Kesantunan bukan tentang membatasi keindahan, melainkan memilih untuk memancarkannya dengan cara yang paling mulia dan berwibawa."
+              <footer class="font-label-sm text-label-sm not-italic uppercase tracking-widest text-primary mt-2 font-bold">— Tim Desain Astalica Atelier</footer>
+</blockquote>
+</div>
+</div>
+<div class="lg:col-span-6 grid grid-cols-2 gap-space-md">
+<div class="relative rounded-xl overflow-hidden aspect-[3/4] shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Close-up detail shot of exquisite pure silk textile being meticulously draped and inspected by artisan hands with fine embroidery details in a serene bright atelier setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrI1agItnVYiy8YyNrp7VADsybHQSxHrCrXQWl2n9rLzIqgZQSOy4y23avZ3x5yavJRsdtW3VBl762EW-HVsVfoKtlHXhCipC9kSG2VJgeE4SC21zHHNz3lNcsdamEHhXqHat3lXLusPNfY477bdfnpWbsk2g5gJqXeH41HjFQfGDTOsVwMSYfv7GERKawFtAANpA2qeRUjc0ZI1g2c8v-bU5nIfa5a7aqbSOtZjB">
+</div>
+<div class="relative rounded-xl overflow-hidden aspect-[3/4] shadow-lg translate-y-6">
+<img class="w-full h-full object-cover" data-alt="A modest high-fashion model wearing emerald green tailored coat dress with soft golden silk veil in an art gallery architectural environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA85csVOjpkldk8EdpiaThTLnsSq0behUoXjix6_fQXhnJeEHOAnc-docv-ayT29OuKzEyLyLh9u2zUL6jnY7pI7swG-THFsmnM7QKsQzGOi8pnu3-N69-3P5Q2ahsx2N-oJZJtMSaBR3xgGaQ4-L5ZVhqR8A9UxE5WQKhyHYO92t7OFOD9pHhYLic5ckrJBCRTiOnzRo0TgNtug-sx0olyccr5e1dpSgI8ns8uL8fJ">
+</div>
+</div>
+</div>
+<!-- 3 Key Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-lg">
+<!-- Pillar 1 -->
+<div class="p-space-xl rounded-2xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+<div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[30px]">eco</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Serat Sutra Organik Pilihan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Ditenun dari serat alami berstandar internasional yang sejuk, breathable, dan jatuh sempurna di kepala tanpa rasa gerah sepanjang hari.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-xl rounded-2xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+<div class="w-14 h-14 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[30px]">architecture</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Presisi Jahitan &amp; Laser Cut Couture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Setiap helai tepian hijab diselesaikan dengan teknologi laser-cut presisi tinggi dan sentuhan jahit tangan artisan berpengalaman.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-xl rounded-2xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col items-start">
+<div class="w-14 h-14 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[30px]">palette</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Palet Eksklusif Wastra &amp; Royal Tone</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Warna-warna anggun yang dikurasi khusus menyatu sempurna dengan hangatnya undertone kulit wanita Asia Tenggara untuk aura berseri.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- HIGHLIGHT FEATURE INTERACTION: Fabric & Style Selector -->
+<section class="w-full py-20 bg-surface-container-low">
+<div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin">
+<div class="bg-surface rounded-2xl shadow-md p-space-lg lg:p-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold mb-2">PENGALAMAN ATELIER INTERAKTIF</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Eksplorasi Tekstur &amp; Bahan Sutra</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Sentuh dan pilih ragam karakter tenun kain khas Astalica untuk menemukan padanan paling sempurna bagi kebutuhan hari istimewa Anda.
+            </p>
+<!-- Fabric Options Selection -->
+<div class="flex flex-col gap-3" id="fabricOptions">
+<button class="fabric-btn text-left p-3.5 bg-surface-container-high text-on-surface transition-all flex items-center justify-between shadow-sm rounded-full" onclick="selectFabric(0)">
+<div>
+<h4 class="font-title-md text-title-md font-semibold">Mulberry Silk Satin</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kemilau mewah memikat, tekstur licin nan lembut dengan drape anggun.</p>
+</div>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</button>
+<button class="fabric-btn text-left p-3.5 bg-surface hover:bg-surface-container text-on-surface transition-all flex items-center justify-between rounded-full" onclick="selectFabric(1)">
+<div>
+<h4 class="font-title-md text-title-md font-semibold">Fine Voile de Luxe</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ringan, tegak di dahi tanpa perlu sematan rumit, sangat sejuk seharian.</p>
+</div>
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+</button>
+<button class="fabric-btn text-left p-3.5 bg-surface hover:bg-surface-container text-on-surface transition-all flex items-center justify-between rounded-full" onclick="selectFabric(2)">
+<div>
+<h4 class="font-title-md text-title-md font-semibold">Chiffon Crepe Royale</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sentuhan butiran pasir bertekstur mikro dengan elastisitas alami untuk layering.</p>
+</div>
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="relative rounded-xl overflow-hidden aspect-[16/10] shadow-lg bg-surface-container">
+<img class="w-full h-full object-cover transition-opacity duration-500" data-alt="Macro macro-photography of premium golden champagne silk fabric rippling softly with rich light reflections and delicate golden fibers visible." id="fabricPreviewImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb0-b6wAkToD4qbAyOPlqbgVnOtuBSaGx2y8LIXM-dOY-9WHxEhIqwtkcgJeze5NC8o5x7JC-N5hZ_4onk98T7X3W4un7n5dTVplUfuHtB32j_dsLyRIjRkcNADt0BC9rv2BfsAMI6w1Z1DsH5y8hrmKcSts1tqrNN4IoMv0tit2TucqniSwdiTGWqgliVMMkTugJrXM60BeJPNQot4ZTr9OM1hcdFfHSNW0VmHUGh">
+<div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-md p-4 flex items-center justify-between shadow-md rounded-full">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Karakteristik Terpilih</span>
+<p class="font-body-md text-body-md text-on-surface font-medium" id="fabricDetailsText">Mulberry Silk Satin • Densitas 19 Momme • Finishing Pearl Luster</p>
+</div>
+<a class="hidden sm:inline-flex items-center text-primary font-label-md text-label-md font-semibold hover:underline" href="#kontak">
+                  Minta Sampel Kain <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES SECTION -->
+<section class="w-full py-24 bg-surface" id="layanan-solusi">
+<div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center mb-space-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.25em] font-bold mb-2">LAYANAN &amp; SOLUSI KHUSUS</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-display-md text-on-surface max-w-2xl leading-tight">
+          Layanan Eksklusif Kami
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-3">
+          Dedikasi pelayanan menyeluruh untuk melengkapi kebutuhan busana santun personal hingga korporasi.
+        </p>
+<div class="w-12 h-0.5 bg-primary mt-4"></div>
+</div>
+<!-- 4 Luxury Service Cards in Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Service 1 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-space-md">
+<span class="material-symbols-outlined text-[28px]">favorite</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Pernikahan &amp; Sakral</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold mt-1 mb-space-sm group-hover:text-primary transition-colors">
+              Bespoke Bridal &amp; Custom Veil
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Desain hijab dan kerudung pengantin custom bertabur kristal swarovski dan bordir monogram khusus yang dirancang eksklusif untuk akad dan resepsi megah Anda.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md">
+<a class="inline-flex items-center text-primary font-label-md text-label-md font-semibold group-hover:translate-x-1 transition-transform" href="#kontak">
+              Jadwalkan Konsultasi <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-space-md">
+<span class="material-symbols-outlined text-[28px]">style</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Kurasi Persona</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold mt-1 mb-space-sm group-hover:text-secondary transition-colors">
+              Private Styling Concierge
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Sesi konsultasi privat satu-lawan-satu bersama modest stylist profesional untuk analisis color-harmony, bentuk wajah, dan padu padan busana acara formal.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md">
+<a class="inline-flex items-center text-secondary font-label-md text-label-md font-semibold group-hover:translate-x-1 transition-transform" href="#kontak">
+              Reservasi Sesi <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-space-md">
+<span class="material-symbols-outlined text-[28px]">card_giftcard</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider">Hampers &amp; Korporasi</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold mt-1 mb-space-sm group-hover:text-primary transition-colors">
+              Corporate &amp; VIP Gifting
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Paket bingkisan bingkai eksklusif, seragam korporasi modest berwibawa, dan souvenir hampers hari raya bersertifikasi premium dengan kemasan beludru emas.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md">
+<a class="inline-flex items-center text-primary font-label-md text-label-md font-semibold group-hover:translate-x-1 transition-transform" href="#kontak">
+              Katalog Korporat <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group relative rounded-2xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">dry_cleaning</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Perawatan Tekstil</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold mt-1 mb-space-sm group-hover:text-primary transition-colors">
+              Atelier Care &amp; Restoration
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Layanan pencucian khusus sutra (dry clean treatment botanis) dan restorasi serat hijab agar kilau alaminya dan kelembutan orisinal tetap terjaga abadi.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md">
+<a class="inline-flex items-center text-primary font-label-md text-label-md font-semibold group-hover:translate-x-1 transition-transform" href="#kontak">
+              Panduan Spa Sutra <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NEWS & ARTICLES SECTION -->
+<section class="w-full py-24 bg-surface-container-low" id="warta-tren">
+<div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.25em] font-bold">WARTA &amp; INSPIRASI</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-display-md text-on-surface mt-2">
+            Warta, Tren &amp; Inspirasi Gaya
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Ulasan berkala seputar dinamika modest fashion global, panduan adibusana, serta kisah di balik mahakarya kain Nusantara.
+        </p>
+</div>
+<!-- 3 Modern Article Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-xl">
+<!-- Article 1 -->
+<article class="flex flex-col rounded-2xl bg-surface overflow-hidden shadow-sm hover:shadow-lg transition-all group">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High fashion modest runway presentation showing model in draped deep emerald green silk satin hijab and modern minimalist tailored abaya with soft architectural lighting in Paris." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfq8o_jfhSElPBDlIayA6V6OaSDRUcsVtqJrE-2BTRsqGVAC-iq4A9E8KGGzKXAUEthit6OWS3TtGdJ5-JdNMtB8liGq5SsN3elo3DHCyyLGtx7Xif9rIpo6IXeKSdVcYZxQ8lDXtHZsJ0oAg2Y7IaTCv9pN4Zwfobmb9sGQHNHKstAI6lyoD5SxbQjnt0bMtbQ-VMc6eeHOvIPSZ1gvQV-JfoMjf-djafidcf6XlR">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold">Tren Modest 2025</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm mb-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="">18 Mei 2025</span>
+<span class="">•</span>
+<span class="">5 Menit Baca</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors leading-snug mb-2">
+                Tren Hijab Draped 2025: Mengapa Silk Satin Emerald Jadi Primadona Panggung Paris
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md line-clamp-3">
+                Eksplorasi siluet drape asimetris yang memikat pecinta modest adibusana internasional dengan paduan palet zamrud mulia dan kemilau satin alami.
+              </p>
+</div>
+<a class="inline-flex items-center font-label-md text-label-md text-primary font-semibold group-hover:underline" href="#">
+              Baca Selengkapnya →
+            </a>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="flex flex-col rounded-2xl bg-surface overflow-hidden shadow-sm hover:shadow-lg transition-all group">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aesthetic flatlay of folded Mulberry silk scarves in muted champagne and pastel tones arranged with wooden hanger, silk care detergent, and steam iron." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA3bo8v_QgIAV6Fo48v6s6yXkjkJyk3YEuP0yGJAxX6rjuUHCSeyLTVjLBhJ_5pnwAxZRs3EZHPHKHUCCIjU5g5Cc-zy7OJd5WQL4p5x10ZCa490g-UcDNlwvxbN72M7TaDTo3XyUZ9VIZpIz4JJSD7cskWYKW7kpP8y5VQ2hdmyXtEXyigzCHRIWBMXyS6FP2qme8sd5SuqL4rLMbzixLZ9FhdxwyrFDmG_9e_xG-">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold">Atelier Care</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm mb-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="">10 Mei 2025</span>
+<span class="">•</span>
+<span class="">4 Menit Baca</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors leading-snug mb-2">
+                Panduan Merawat Hijab Sutra Mulberry Agar Kilau dan Lembutnya Bertahan Bertahun-tahun
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md line-clamp-3">
+                Kiat esensial suhu pencucian, jenis sabun pH netral khusus sutra, serta trik menyetrika tanpa merusak tenunan mikro sutra organik.
+              </p>
+</div>
+<a class="inline-flex items-center font-label-md text-label-md text-primary font-semibold group-hover:underline" href="#">
+              Baca Selengkapnya →
+            </a>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="flex flex-col rounded-2xl bg-surface overflow-hidden shadow-sm hover:shadow-lg transition-all group">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional Indonesian silk weavers sitting at handloom in a sunlit craft workshop, crafting gold thread wastra textiles with proud serene expressions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeMNzwGu-p5WhUKSiDSYdxgnSXNeFwaG5-Y-cFRL78HRaxJ0-nYoMTEWLF8m65QlmU0cm0ZDcasFQpMYT4GP4tkXpy8EodaadAiaDyuDZYhpjiYGsiCJEHPFlRz192pC7ckmdXn9f3lBmahBGTwYx8783I45gVg2cWYHNh_qcc1egY8GcXoheuENj3rB8hJdmZMQ58DjtX8ChUjLObo-AIPSvnlSRS_FqhQ0yJl-v5">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold">Pemberdayaan Sosial</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm mb-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="">28 April 2025</span>
+<span class="">•</span>
+<span class="">6 Menit Baca</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors leading-snug mb-2">
+                Astalica Gandeng Pengrajin Tenun Sutra Lokal dalam Program Pemberdayaan Modest Artisans
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md line-clamp-3">
+                Inisiatif sirkular kami untuk memberdayakan lebih dari 120 perajin tenun wanita di Jawa Barat dan Sulawesi Selatan dengan upah berkeadilan.
+              </p>
+</div>
+<a class="inline-flex items-center font-label-md text-label-md text-primary font-semibold group-hover:underline" href="#">
+              Baca Selengkapnya →
+            </a>
+</div>
+</article>
+</div>
+<!-- Center Action Button -->
+<div class="flex justify-center mt-space-xl">
+<a class="inline-flex items-center justify-center px-8 py-3 bg-surface text-on-surface hover:bg-surface-container font-label-lg text-label-lg shadow-sm transition-all rounded-full" href="#">
+          Lihat Semua Warta &amp; Rilis Pers
+          <span class="material-symbols-outlined ml-2 text-base">newspaper</span>
+</a>
+</div>
+</div>
+</section>
+<!-- CONTACT & VISIT SECTION -->
+<section class="w-full py-24 bg-surface" id="hubungi-kami">
+<div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center mb-space-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.25em] font-bold mb-2">FLAGSHIP BUTIK &amp; RESERVASI</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-display-md text-on-surface max-w-2xl leading-tight">
+          Kunjungi Butik &amp; Hubungi Concierge
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-3">
+          Kami siap menyambut kehadiran Anda di ruang privat atelier kami untuk pengalaman belanja yang personal dan tenang.
+        </p>
+<div class="w-12 h-0.5 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Contact Details & Elegant Form -->
+<div class="lg:col-span-6 flex flex-col gap-space-xl">
+<!-- Information Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-space-md font-semibold">Informasi Flagship Store</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">location_on</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Alamat Flagship</span>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-snug">
+                    Astalica Grand Atelier, Jl. Senopati No. 88, Kebayoran Baru, Jakarta Selatan 12190
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">call</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">WhatsApp &amp; Telepon</span>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-snug">
+                    +62 811-9283-7744 <br> (021) 7280-9988
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">mail</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Surel Resmi</span>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-snug">
+                    concierge@astalica.id <br> press@astalica.id
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">schedule</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Jam Operasional</span>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-snug">
+                    Senin – Minggu <br> 10.00 – 21.00 WIB
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Elegant Inquiry Form -->
+<div class="p-space-xl rounded-2xl bg-surface-container-low shadow-sm">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Kirim Pesan ke Tim Concierge</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+              Isi data berikut untuk permintaan appointment private styling, custom veil, atau katalog korporat.
+            </p>
+<form class="flex flex-col gap-space-md" onsubmit="handleFormSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="fullName">Nama Lengkap *</label>
+<input class="px-4 py-3 bg-surface text-on-surface text-body-md shadow-inner focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all rounded-full" id="fullName" placeholder="Contoh: Sarah Anindya" required="" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="whatsappNumber">Nomor WhatsApp *</label>
+<input class="px-4 py-3 bg-surface text-on-surface text-body-md shadow-inner focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all rounded-full" id="whatsappNumber" placeholder="0812-XXXX-XXXX" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="emailAddress">Alamat Email *</label>
+<input class="px-4 py-3 bg-surface text-on-surface text-body-md shadow-inner focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all rounded-full" id="emailAddress" placeholder="sarah@domain.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="serviceType">Subjek / Kebutuhan Layanan</label>
+<select class="px-4 py-3 bg-surface text-on-surface text-body-md shadow-inner focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all rounded-full" id="serviceType">
+<option value="private-styling">Private Styling Concierge</option>
+<option value="bespoke-bridal">Bespoke Bridal &amp; Custom Veil</option>
+<option value="corporate-gifting">Corporate &amp; VIP Gifting</option>
+<option value="care-restoration">Atelier Hijab Care</option>
+<option value="other">Kunjungan Butik Umum</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="messageText">Pesan atau Permintaan Khusus</label>
+<textarea class="px-4 py-3 rounded-lg bg-surface text-on-surface text-body-md shadow-inner focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all" id="messageText" placeholder="Tuliskan tanggal preferensi kunjungan atau detail busana yang Anda impikan..." rows="3"></textarea>
+</div>
+<button class="mt-2 inline-flex items-center justify-center px-8 py-3.5 bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md hover:bg-secondary-container hover:text-on-secondary-container transition-all rounded-full" id="submitBtn" type="submit">
+                Kirim Pesan ke Concierge
+                <span class="material-symbols-outlined ml-2 text-base">send</span>
+</button>
+<div class="hidden p-3 bg-secondary-fixed text-on-secondary-fixed font-body-sm text-body-sm text-center rounded-full" id="formSuccessToast">
+                Terima kasih. Permintaan Anda telah diterima oleh Concierge Astalica. Kami akan menghubungi via WhatsApp dalam 1 jam kerja.
+              </div>
+</form>
+</div>
+</div>
+<!-- Right Column: Visual Map Placeholder & Boutique Facade -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<!-- Interactive Map Container -->
+<div class="relative rounded-2xl overflow-hidden shadow-lg bg-surface-container-high h-[360px] flex flex-col justify-end p-space-md">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-location="Senopati, Jakarta Selatan, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOBoRP9osUNE5lzj-jLWveKOAhZZV5rpasVBylqfyxZ_-kbYS8YuC4QGPp53o7rRopRxTXJq_Tmleaq3rCeYDwQT51Bq_ircSOB9i7qbzxOZ_TBQCdXlKRyVbbbUMTMMSryEK-5rhNogF5eSFZKLgp20uSqOy5reNzK89xTpTDmrEy8mVvoOWf_FImJR72weClqWdSL-zHpJGuZ-vo_GYm9qre_hfAZuvVY2bL0I7K')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/30 to-transparent pointer-events-none"></div>
+<!-- Custom Location Marker overlay card -->
+<div class="relative z-10 bg-surface/95 backdrop-blur-md p-space-md shadow-xl flex items-center justify-between gap-4 rounded-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">store</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md font-semibold text-on-surface">Astalica Grand Atelier Senopati</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lantai 1–2 Galeri Privat &amp; Fitting Salon</p>
+</div>
+</div>
+<a class="shrink-0 inline-flex items-center px-3.5 py-2 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold hover:bg-primary hover:text-on-primary transition-colors rounded-full" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+                Petunjuk Arah <span class="material-symbols-outlined text-sm ml-1">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Boutique Architectural Facade Showcase -->
+<div class="grid grid-cols-2 gap-space-md">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] shadow-md">
+<img class="w-full h-full object-cover" data-alt="Elegant luxury high-end modest fashion boutique interior in Senopati Jakarta with warm champagne lighting, travertine marble podiums, and silk scarves neatly showcased." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXi37QMyMdeCyCx_x49pfB43pQhlYGtzxIR6OKEAItmJ_5iKleq_D9SKqlj7_4Ddyk3UH8bXnoePeMO2Mt2hy_aYhnRfL6nbAz5wB-pG5hmvDlpaKYdadCUGZuxzjeAzKMJkezdsT1OCevkzXTJrIb7LpxFoOcYjv59ZHat5pSrU_XZbwGzAgg2OvZRodyol6cBuKyf1jpqOGUQa8LkRZDYK05Qoug8EytORJNCg_g">
+<div class="absolute bottom-2 left-2 px-2.5 py-1 bg-surface/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm rounded-full">
+                Interior VIP Lounge
+              </div>
+</div>
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] shadow-md">
+<img class="w-full h-full object-cover" data-alt="Minimalist modern facade exterior of Astalica luxury boutique on Senopati street with brass signage and lush tropical greenery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7h19lUX-fPGL-YPGy25Mc4WwpPe_0R-S5o6wKjEF44O4M_mzixWLa8iljwZZMaXOmoY6jN0EyhPAy733ovKLE5_vKxQNdku2eBozyBxpBMV4EwANdOomATyhQ0NKAs8agzUaolx7KJFY1SG6ZRr66i2cNzg7mTp2w4UNm5e8uya3r5qDbgiyq0KDw9f0Qw-XjAcCb0gMHiJIaOyh-hr83fj_YrVH1B6Swe0d30IJm">
+<div class="absolute bottom-2 left-2 px-2.5 py-1 bg-surface/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm rounded-full">
+                Fasad Atelier Senopati
+              </div>
+</div>
+</div>
+<!-- VIP Appointment Callout -->
+<div class="p-space-lg bg-gradient-to-r from-primary-fixed to-tertiary-fixed text-on-primary-fixed flex items-center justify-between shadow-sm rounded-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[32px]">workspace_premium</span>
+<div>
+<h4 class="font-title-md text-title-md font-semibold">Layanan Valet &amp; Private Fitting Room</h4>
+<p class="font-body-sm text-body-sm opacity-90">Tersedia parkir valet gratis dan ruang ganti terpisah untuk kenyamanan syar'i keluarga Anda.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NEWSLETTER EXCLUSIVE EMBED -->
+<section class="w-full py-16 bg-surface-container">
+<div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin">
+<div class="rounded-2xl bg-surface p-space-xl lg:p-14 shadow-md flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<div class="flex flex-col max-w-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold mb-2">ATELIER PRIVILEGE CLUB</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-semibold mb-2">Dapatkan Undangan Koleksi Perdana</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Jadilah yang pertama menerima lookbook digital edisi terbatas Hari Raya dan undangan privat peragaan busana Astalica.
+          </p>
+</div>
+<form class="w-full lg:w-auto flex flex-col sm:flex-row items-stretch gap-2 shrink-0" onsubmit="handleNewsletter(event)">
+<input class="px-5 py-3.5 bg-surface-container-low text-on-surface font-body-md text-body-md min-w-[280px] shadow-inner focus:outline-none focus:ring-2 focus:ring-primary/40 rounded-full" placeholder="Masukkan alamat email Anda" required="" type="email">
+<button class="inline-flex items-center justify-center px-6 py-3.5 bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container hover:text-on-primary-container transition-all rounded-full" type="submit">
+            Berlangganan <span class="material-symbols-outlined ml-1.5 text-base">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Client-side Micro-interactions Script -->
+<script>
+    const fabricData = [
+      {
+        name: "Mulberry Silk Satin • Densitas 19 Momme • Finishing Pearl Luster",
+        imgAlt: "Macro macro-photography of premium golden champagne silk fabric rippling softly with rich light reflections and delicate golden fibers visible."
+      },
+      {
+        name: "Fine Voile de Luxe • 100% Breathable Fiber • Non-Slip Firm Crown",
+        imgAlt: "Macro shot of fine lightweight voile fabric texture in deep emerald green tone showing ultra-fine breathable weaving structure."
+      },
+      {
+        name: "Chiffon Crepe Royale • Textured Micro-Grain • Luxurious Fluid Draping",
+        imgAlt: "Detailed close up of crepe chiffon modest fabric in rich warm beige showing pebble-like texture and soft gentle folds."
+      }
+    ];
+
+    function selectFabric(index) {
+      const container = document.getElementById('fabricOptions');
+      const buttons = container.querySelectorAll('.fabric-btn');
+      
+      buttons.forEach((btn, i) => {
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (i === index) {
+          btn.classList.add('bg-surface-container-high', 'shadow-sm');
+          btn.classList.remove('bg-surface');
+          icon.textContent = 'check_circle';
+          icon.className = 'material-symbols-outlined text-primary';
+        } else {
+          btn.classList.remove('bg-surface-container-high', 'shadow-sm');
+          btn.classList.add('bg-surface');
+          icon.textContent = 'radio_button_unchecked';
+          icon.className = 'material-symbols-outlined text-outline';
+        }
+      });
+
+      const detailsEl = document.getElementById('fabricDetailsText');
+      if (detailsEl) {
+        detailsEl.textContent = fabricData[index].name;
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const toast = document.getElementById('formSuccessToast');
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.innerHTML = 'Mengirim Pesan... <span class="material-symbols-outlined ml-2 animate-spin text-base">sync</span>';
+      
+      setTimeout(() => {
+        btn.classList.add('hidden');
+        toast.classList.remove('hidden');
+      }, 700);
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input');
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Terdaftar ✓';
+      btn.classList.add('bg-secondary', 'text-on-secondary');
+      input.value = '';
+      setTimeout(() => {
+        btn.textContent = 'Berlangganan →';
+        btn.classList.remove('bg-secondary', 'text-on-secondary');
+      }, 3000);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface-variant pt-space-xl pb-space-lg shadow-[0_-1px_10px_rgba(27,59,43,0.02)]"><div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-md"><img alt="Astalica Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrB1aepAKTrZP6swu-2zDI0udz3fUagaPak8yjFL_w9imZyKosTLoKjs_3YVQB-cuWQs4pKGyJcGvoV48VgZ83Eo2oKyAAoWpGB_xzEyBeBXX-4laWjF3Jpnk5mcD8qWxBQN9ZZX0HPXKDSd8COTn-Nta-dE-0ybepPBKgdmwmDKWPLfy6miWbUSLe8cOrMsrTH70nG2r3D4fX10EXC16WzR0fdrze7MGuZ9jUcgucNgsQ"><span class="font-headline-sm text-headline-sm text-primary tracking-wide">Astalica</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Kemewahan Kesantunan dalam Setiap Helai. Menghadirkan siluet anggun dan keindahan modest busana adibusana modern untuk keanggunan sejati.</p><div class="flex items-center gap-space-md pt-space-sm"><a aria-label="Instagram" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="TikTok" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#"><span class="material-symbols-outlined text-[18px]">play_circle</span></a><a aria-label="YouTube" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="#"><span class="material-symbols-outlined text-[18px]">chat</span></a></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface tracking-wide mb-space-xs">Navigasi Cepat</h3><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="beranda" href="#">Beranda</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="tentang-kami" href="#">Tentang Kami</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="layanan-solusi" href="#">Layanan &amp; Solusi</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="warta-tren" href="#">Warta &amp; Tren</a></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface tracking-wide mb-space-xs">Koleksi Adibusana</h3><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sutera Signature</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Voile Eksklusif</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pashmina Atelier</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Aksesori Pin &amp; Bros</a></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface tracking-wide mb-space-xs">Bantuan &amp; Layanan</h3><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="hubungi-kami" href="#">Hubungi Konsultan</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Panduan Perawatan</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pengiriman &amp; Retur</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Astalica Modest Atelier. Hak Cipta Dilindungi Undang-Undang.</p><p class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Kemewahan Kesantunan dalam Setiap Helai</p></div></div></footer>
+
+</body></html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#fcf9f8]" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>ASTALICA - Katalog Hijab Mewah</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#fcf9f8",
+            "surface-container": "#f0eded",
+            "surface-container-low": "#f6f3f2",
+            "surface-container-high": "#eae7e7",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#775a19",
+            "primary-container": "#c5a059",
+            "secondary": "#456553",
+            "secondary-container": "#c4e8d1",
+            "emerald-hover": "#2C533E",
+            "gold-light": "#DFC27D",
+            "gold-dark": "#A8833E",
+            "on-surface": "#1c1b1b",
+            "on-surface-variant": "#4e4639",
+            "outline": "#7f7667",
+            "outline-variant": "#d1c5b4"
+          },
+          fontFamily: {
+            headline: ["Playfair Display", "serif"],
+            body: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      -webkit-tap-highlight-color: transparent;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fcf9f8;
+      color: #1c1b1b;
+      margin: 0;
+      padding: 0;
+    }
+    .font-headline {
+      font-family: 'Playfair Display', serif;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 16px);
+    }
+    .pt-safe {
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+  </style>
+</head>
+<body class="min-h-full bg-[#fcf9f8] text-[#1c1b1b] flex flex-col relative antialiased selection:bg-[#c5a059]/20 selection:text-[#775a19]">
+<!-- Top App Bar Navigation -->
+<header class="sticky top-0 z-40 w-full pt-safe bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#eae7e7]/80">
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="flex items-center">
+<span class="font-headline text-[24px] font-semibold tracking-wider text-[#456553]">ASTALICA</span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Cari koleksi" class="w-10 h-10 flex items-center justify-center rounded-full text-[#4e4639] hover:bg-[#f0eded] transition-colors" type="button">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</button>
+<button aria-label="Tas Belanja" class="w-10 h-10 flex items-center justify-center rounded-full text-[#4e4639] hover:bg-[#f0eded] relative transition-colors" type="button">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#c5a059] ring-2 ring-[#fcf9f8]"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-[#775a19] flex items-center justify-center ml-1 shadow-sm">
+<span class="material-symbols-outlined text-white text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="flex-1 w-full flex flex-col pb-32">
+<!-- Search Input & Filter Tags -->
+<section class="w-full px-4 pt-3 pb-2 flex flex-col gap-2.5">
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#7f7667]">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full pl-10 pr-10 py-2.5 bg-white text-[#1c1b1b] rounded-full border border-[#eae7e7] text-[13px] placeholder:text-[#7f7667] focus:outline-none focus:ring-2 focus:ring-[#c5a059]/40 shadow-sm" placeholder="Cari koleksi hijab sutra, voile..." type="text"/>
+<button aria-label="Suara" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#7f7667] hover:text-[#775a19]" type="button">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+<!-- Category Filter Pills (Horizontal Scroll) -->
+<div class="w-full overflow-x-auto no-scrollbar py-1 -mx-4 px-4 flex items-center gap-2">
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-[12px] font-semibold bg-[#456553] text-white shadow-sm flex items-center gap-1.5 active:scale-95 transition-transform" type="button">
+<span>Semua Hijab</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#DFC27D]"></span>
+</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-[12px] font-medium bg-[#f6f3f2] text-[#4e4639] hover:bg-[#f0eded] active:scale-95 transition-all" type="button">
+          Segi Empat
+        </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-[12px] font-medium bg-[#f6f3f2] text-[#4e4639] hover:bg-[#f0eded] active:scale-95 transition-all" type="button">
+          Pashmina
+        </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-[12px] font-medium bg-[#f6f3f2] text-[#4e4639] hover:bg-[#f0eded] active:scale-95 transition-all" type="button">
+          Voile Ultrafine
+        </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-[12px] font-medium bg-[#f6f3f2] text-[#4e4639] hover:bg-[#f0eded] active:scale-95 transition-all" type="button">
+          Silk Satin
+        </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-[12px] font-medium bg-[#f6f3f2] text-[#4e4639] hover:bg-[#f0eded] active:scale-95 transition-all" type="button">
+          Monogram
+        </button>
+</div>
+<!-- Quick Controls (Detail Filter & Sort) -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f6f3f2] text-[#1c1b1b] text-[11px] font-medium hover:bg-[#f0eded] border border-[#e5e2e1]" id="openFilterModal" type="button">
+<span class="material-symbols-outlined text-[15px] text-[#775a19]">tune</span>
+<span>Saringan Detail</span>
+<span class="w-4 h-4 rounded-full bg-[#c5a059] text-white text-[9px] flex items-center justify-center font-bold">2</span>
+</button>
+<div class="relative inline-flex items-center">
+<select class="appearance-none bg-[#f6f3f2] text-[#1c1b1b] text-[11px] font-medium pl-2.5 pr-6 py-1 rounded-full border border-[#e5e2e1] focus:outline-none cursor-pointer">
+<option>Terbaru</option>
+<option>Paling Diminati</option>
+<option>Harga: Terendah</option>
+<option>Harga: Tertinggi</option>
+</select>
+<span class="material-symbols-outlined text-[14px] text-[#7f7667] absolute right-1.5 pointer-events-none">expand_more</span>
+</div>
+</div>
+<span class="text-[11px] text-[#7f7667]">18 Karya Kurasi</span>
+</div>
+</section>
+<!-- Editorial Spotlight Banner -->
+<section class="w-full px-4 py-2">
+<div class="relative w-full rounded-2xl overflow-hidden bg-[#eae7e7]/70 border border-[#e5e2e1] p-4 flex flex-col justify-between">
+<div class="flex flex-col gap-1 max-w-[75%]">
+<span class="text-[10px] font-semibold text-[#775a19] tracking-widest uppercase">Edisi Adibusana 2025</span>
+<h2 class="font-headline text-[18px] font-semibold text-[#1c1b1b] leading-tight">Kemurnian Tenun Emas Nusantara</h2>
+<p class="text-[12px] text-[#4e4639] line-clamp-1">Kombinasi serat sutra murbei alami &amp; filamen berkilau.</p>
+</div>
+<div class="pt-3 flex items-center justify-between">
+<button class="px-3.5 py-1.5 rounded-full bg-[#456553] text-white text-[12px] font-medium shadow-sm hover:bg-[#2C533E] active:scale-95 transition-all flex items-center gap-1" type="button">
+<span>Lihat Sorotan</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+<span class="text-[11px] text-[#775a19] font-medium">Persediaan Terbatas</span>
+</div>
+</div>
+</section>
+<!-- 2-Column Product Catalog Grid -->
+<section class="w-full px-4 py-2">
+<div class="grid grid-cols-2 gap-3.5">
+<!-- Product 1 -->
+<article class="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#eae7e7] shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-[#f6f3f2] overflow-hidden">
+<img alt="Lembah Swarna Square Hijab" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDshMi9D02Uj2KWsl_R8G_roSNNOR9o3tbLEikjSn40ohC8Yi_dM0Fd6T-i-r6GWLTeUrNLBpNYhGNuWHyjV-wU2aG6rCIrORs4qcKI5LubgCEUKGMd6HtrJlTkR6uULAlOLkSBPRLJg9zF6pP4mOW_mvyA0kpZYVQDgzJ2NIZaSWiQNgaHeXBTK5tu1RWjNV4EeSiwIc1UAb_7x9W8Eruna2A9frWKUjZ5sFgOqsyZ"/>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-[#456553] text-white text-[10px] font-semibold shadow-sm">Terlaris</span>
+</div>
+<button aria-label="Favoritkan" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4e4639] hover:text-rose-600 shadow-sm transition-colors" onclick="this.classList.toggle('text-rose-600')" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 my-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E5D3B3] ring-1 ring-[#c5a059]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#2A3E34]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#8A5C43]"></span>
+</div>
+<span class="text-[11px] text-[#7f7667]">Sutra Organza • 120×120</span>
+<h3 class="font-headline text-[14px] font-semibold text-[#1c1b1b] leading-tight line-clamp-1">Lembah Swarna Square</h3>
+<span class="text-[14px] font-bold text-[#775a19]">Rp 750.000</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-full bg-[#f6f3f2] hover:bg-[#456553] hover:text-white text-[#1c1b1b] text-[12px] font-semibold active:scale-95 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</article>
+<!-- Product 2 -->
+<article class="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#eae7e7] shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-[#f6f3f2] overflow-hidden">
+<img alt="Maharani Monogram" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6EHngV6EfNDvecCEBo5vO_xfhm_od7qtoK4qE_0-VnUcvv1lvPqr0d4PN6ztHr9vtUkUeOS09nWy4x-BZNNmOHb8Q3xQKGs6-753AbZJnOTy-tVWLE7Jp-l5zGkq2hwCPzGu2cbs07q_CG1bk8POL_AgI9x00roZft8hSWDklTAPWCqaeQrq-TLUtGFplxAh71zZ69bcPrte1iCt-ESZd85qTNmnEATBgvUPQQOfk"/>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-[#c5a059] text-white text-[10px] font-semibold shadow-sm">Edisi Sutra</span>
+</div>
+<button aria-label="Favoritkan" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4e4639] hover:text-rose-600 shadow-sm transition-colors" onclick="this.classList.toggle('text-rose-600')" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 my-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EAE7DF] ring-1 ring-[#c5a059]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#5C6E64]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#D4AF37]"></span>
+</div>
+<span class="text-[11px] text-[#7f7667]">Voile Ultrafine • 120×120</span>
+<h3 class="font-headline text-[14px] font-semibold text-[#1c1b1b] leading-tight line-clamp-1">Maharani Monogram</h3>
+<span class="text-[14px] font-bold text-[#775a19]">Rp 890.000</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-full bg-[#f6f3f2] hover:bg-[#456553] hover:text-white text-[#1c1b1b] text-[12px] font-semibold active:scale-95 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</article>
+<!-- Product 3 -->
+<article class="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#eae7e7] shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-[#f6f3f2] overflow-hidden">
+<img alt="Samudra Pashmina Silk" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCabJh2JQ4YsBcwTyZ16_Y9qDTZj0tkmkWtenZlwAbhGUdkyR4aIAlzX-NCr_YJ5dImO99qfCtHZAQ8GzEe2hwzIKsWSijDlaYb6-Tz8FwqEAJPwgrk9m7oV3mpdVJpnwfYLJghI_lER2o3pKKiY0YzJrb6_N0Vmk2AVjqh4jV9MAbiJoqEN7NTLBJ6mBLE50gBhtqX055x9O-lqSI_21f7jHddW5K7IUZqOqBxnHxn"/>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-[#f0eded] text-[#4e4639] text-[10px] font-medium">Pashmina</span>
+</div>
+<button aria-label="Favoritkan" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4e4639] hover:text-rose-600 shadow-sm transition-colors" onclick="this.classList.toggle('text-rose-600')" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 my-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#1B3B2B] ring-1 ring-[#c5a059]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#D1C5B4]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#3B4D61]"></span>
+</div>
+<span class="text-[11px] text-[#7f7667]">Mulberry Silk • 200×75</span>
+<h3 class="font-headline text-[14px] font-semibold text-[#1c1b1b] leading-tight line-clamp-1">Samudra Pashmina Silk</h3>
+<span class="text-[14px] font-bold text-[#775a19]">Rp 1.150.000</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-full bg-[#f6f3f2] hover:bg-[#456553] hover:text-white text-[#1c1b1b] text-[12px] font-semibold active:scale-95 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</article>
+<!-- Product 4 -->
+<article class="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#eae7e7] shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-[#f6f3f2] overflow-hidden">
+<img alt="Kirana Bridal Veil" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpeZ8ONjet4OdkukKev7JemWY7HOQ-D3dwDgpLXq_21XMQ6CyE71yLTBeEYEDZzhWd-s8V3FAs33hC34RRL1P5JmuWSFFAIHmHVTFTJuYGgj2pJFIDPyCn5XBkKeQwAAx1ZGG-X4tT95joQl_WYMiF1XrtqG18mQ6_DP7xRt2YO6_3ck-oa824Lmgxt3KFbTI71fxdnn7dGt5Qauwm1upWbyk6xcrBiOmLMW5djTg-"/>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-[#775a19] text-white text-[10px] font-semibold shadow-sm">Limited</span>
+</div>
+<button aria-label="Favoritkan" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4e4639] hover:text-rose-600 shadow-sm transition-colors" onclick="this.classList.toggle('text-rose-600')" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 my-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#FFFFFF] ring-1 ring-slate-300"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#F4EBD9]"></span>
+</div>
+<span class="text-[11px] text-[#7f7667]">Bridal Veil • 140×140</span>
+<h3 class="font-headline text-[14px] font-semibold text-[#1c1b1b] leading-tight line-clamp-1">Kirana Bridal Veil</h3>
+<span class="text-[14px] font-bold text-[#775a19]">Rp 1.450.000</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-full bg-[#f6f3f2] hover:bg-[#456553] hover:text-white text-[#1c1b1b] text-[12px] font-semibold active:scale-95 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</article>
+<!-- Product 5 -->
+<article class="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#eae7e7] shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-[#f6f3f2] overflow-hidden">
+<img alt="Nirmala Raw Silk" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVSxeaK17xpJPqjtMj2DFe2U-vmNlhxhakD8gF-vjhoqC3UDG13iEHGeyeeOUYCvkr0CCF9pn7iIVwbFflHaDzt6CiO-ExZoBRzGhA1oJGe2LFDioAzSpL32N-VeIUw6FUUurY7tK98lpnZISU4GHbi_ZHeNgT788Tv1XY3No8kt3k2qYC1NZcV0HI74kEEbgLSDbObGIiZw7QT5HlStvbP_GdYm2JrB5GMwPlT6Nm"/>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-[#f0eded] text-[#4e4639] text-[10px] font-medium">Organik</span>
+</div>
+<button aria-label="Favoritkan" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4e4639] hover:text-rose-600 shadow-sm transition-colors" onclick="this.classList.toggle('text-rose-600')" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 my-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#C2B299] ring-1 ring-[#c5a059]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#524B3D]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#8E7958]"></span>
+</div>
+<span class="text-[11px] text-[#7f7667]">Raw Silk • 115×115</span>
+<h3 class="font-headline text-[14px] font-semibold text-[#1c1b1b] leading-tight line-clamp-1">Nirmala Raw Silk</h3>
+<span class="text-[14px] font-bold text-[#775a19]">Rp 680.000</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-full bg-[#f6f3f2] hover:bg-[#456553] hover:text-white text-[#1c1b1b] text-[12px] font-semibold active:scale-95 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</article>
+<!-- Product 6 -->
+<article class="flex flex-col bg-white rounded-2xl overflow-hidden border border-[#eae7e7] shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-[#f6f3f2] overflow-hidden">
+<img alt="Gitanjali Voile" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS55k_mDV5SgwStqaBLB64QZeMDpqlI1PLBpd5kDTvdD5S7lzep9CG9hGQC2YFPdyC524KHRRKDctLFHklSKkF-rtWfvGHuwhn4pVQpTqiKSfJxfWwgb5Sj4bMmrMvjloiRvLhCwCxPd_EUiMZvO4LQt97ysQ5u2n5gpZPEeKe8JshgH0Q9DMCqsapg7RouKYBPcE1oOQ3vgEpFkCUqZGceJ7Gwuq-Vsb50bJ6j8M1"/>
+<div class="absolute top-2.5 left-2.5">
+<span class="px-2 py-0.5 rounded-full bg-[#456553] text-white text-[10px] font-semibold shadow-sm">Koleksi Baru</span>
+</div>
+<button aria-label="Favoritkan" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4e4639] hover:text-rose-600 shadow-sm transition-colors" onclick="this.classList.toggle('text-rose-600')" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 my-0.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EADCC0] ring-1 ring-[#c5a059]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#4F3C2C]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#20362B]"></span>
+</div>
+<span class="text-[11px] text-[#7f7667]">Voile Champagne • 120×120</span>
+<h3 class="font-headline text-[14px] font-semibold text-[#1c1b1b] leading-tight line-clamp-1">Gitanjali Voile</h3>
+<span class="text-[14px] font-bold text-[#775a19]">Rp 820.000</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-full bg-[#f6f3f2] hover:bg-[#456553] hover:text-white text-[#1c1b1b] text-[12px] font-semibold active:scale-95 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>Tambah</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Atelier Concierge Service Banner -->
+<section class="w-full px-4 pt-4 pb-2">
+<div class="w-full p-4 rounded-2xl bg-[#f6f3f2] border border-[#e5e2e1] flex flex-col gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#456553]"></span>
+<span class="text-[10px] text-[#456553] font-bold tracking-wider uppercase">Atelier Concierge Online</span>
+</div>
+<h4 class="font-headline text-[18px] font-semibold text-[#1c1b1b]">Ragu Menentukan Bahan &amp; Warna?</h4>
+<p class="text-[12px] text-[#4e4639] leading-relaxed">Konsultasikan palet busana acara dan perawatan kain sutra Anda bersama Fashion Stylist Astalica.</p>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2.5 px-4 rounded-full bg-[#456553] text-white text-[12px] font-semibold flex items-center justify-center gap-2 hover:bg-[#2C533E] active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[17px]">chat</span>
+<span>Konsultasi WhatsApp</span>
+</button>
+<button aria-label="Panduan Perawatan Bahan" class="p-2.5 rounded-full bg-white border border-[#e5e2e1] text-[#1c1b1b] hover:text-[#775a19] transition-colors flex items-center justify-center shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">local_laundry_service</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Filter & Sort Button (Centered above tab bar) -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#202020] text-white shadow-lg active:scale-95 transition-transform" id="floatingFilterTrigger" type="button">
+<span class="material-symbols-outlined text-[18px] text-[#DFC27D]">filter_list</span>
+<span class="text-[12px] font-semibold tracking-wide">Filter &amp; Urutkan</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#DFC27D]"></span>
+</button>
+</div>
+<!-- Filter Bottom Sheet Modal (Clean, non-blocking default hidden) -->
+<div class="fixed inset-0 z-50 hidden" id="filterModal">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-black/40 backdrop-blur-xs transition-opacity" id="modalBackdrop"></div>
+<!-- Sheet -->
+<div class="absolute inset-x-0 bottom-0 max-h-[85vh] bg-[#fcf9f8] rounded-t-3xl border-t border-[#eae7e7] p-5 flex flex-col gap-4 overflow-y-auto shadow-2xl">
+<!-- Handle -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-1 rounded-full bg-[#d1c5b4]"></div>
+<div class="w-full flex items-center justify-between pt-1">
+<h3 class="font-headline text-[18px] font-semibold text-[#1c1b1b]">Penyaring Koleksi</h3>
+<button class="w-8 h-8 rounded-full bg-[#f0eded] flex items-center justify-center text-[#4e4639] hover:text-[#1c1b1b]" id="closeFilterModal" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Filter Section: Bahan -->
+<div class="flex flex-col gap-2">
+<label class="text-[13px] font-semibold text-[#1c1b1b]">Jenis Bahan Utama</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-3.5 py-1.5 rounded-full bg-[#456553] text-white text-[12px] font-medium" type="button">Sutra Organik</button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#f6f3f2] text-[#4e4639] border border-[#e5e2e1] text-[12px] font-medium" type="button">Voile Ultrafine</button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#f6f3f2] text-[#4e4639] border border-[#e5e2e1] text-[12px] font-medium" type="button">Satin Silk</button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#f6f3f2] text-[#4e4639] border border-[#e5e2e1] text-[12px] font-medium" type="button">Chiffon Crepe</button>
+</div>
+</div>
+<!-- Filter Section: Warna -->
+<div class="flex flex-col gap-2">
+<label class="text-[13px] font-semibold text-[#1c1b1b]">Palet Warna</label>
+<div class="flex items-center gap-3 py-1">
+<button class="w-8 h-8 rounded-full bg-[#F5EFE6] ring-2 ring-[#775a19] flex items-center justify-center shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px] text-[#775a19]">check</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-[#1B3B2B] shadow-sm" type="button"></button>
+<button class="w-8 h-8 rounded-full bg-[#D4AF37] shadow-sm" type="button"></button>
+<button class="w-8 h-8 rounded-full bg-[#7D5A50] shadow-sm" type="button"></button>
+<button class="w-8 h-8 rounded-full bg-[#3B4D61] shadow-sm" type="button"></button>
+<button class="w-8 h-8 rounded-full bg-[#1C1B1B] shadow-sm" type="button"></button>
+</div>
+</div>
+<!-- Filter Section: Ukuran -->
+<div class="flex flex-col gap-2">
+<label class="text-[13px] font-semibold text-[#1c1b1b]">Ukuran Hijab</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-3.5 py-1.5 rounded-full bg-[#456553] text-white text-[12px] font-medium" type="button">120 × 120 cm</button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#f6f3f2] text-[#4e4639] border border-[#e5e2e1] text-[12px] font-medium" type="button">115 × 115 cm</button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#f6f3f2] text-[#4e4639] border border-[#e5e2e1] text-[12px] font-medium" type="button">140 × 140 cm</button>
+<button class="px-3.5 py-1.5 rounded-full bg-[#f6f3f2] text-[#4e4639] border border-[#e5e2e1] text-[12px] font-medium" type="button">200 × 75 cm</button>
+</div>
+</div>
+<!-- Buttons -->
+<div class="flex items-center gap-3 pt-2 pb-4">
+<button class="py-2.5 px-5 rounded-full bg-[#f0eded] text-[#4e4639] text-[12px] font-semibold active:scale-95 transition-all" id="resetFilterBtn" type="button">
+          Atur Ulang
+        </button>
+<button class="flex-1 py-2.5 px-5 rounded-full bg-[#456553] text-white text-[12px] font-semibold shadow-md active:scale-95 transition-all flex items-center justify-center gap-1" id="applyFilterBtn" type="button">
+<span>Terapkan Saringan (18)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-[#fcf9f8]/95 backdrop-blur-md border-t border-[#eae7e7]">
+<div class="h-16 px-2 flex items-center justify-around">
+<a class="flex flex-col items-center justify-center min-w-[56px] py-1 text-[#7f7667] hover:text-[#456553] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="text-[10px] font-medium mt-0.5">Atelier</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] py-1 text-[#456553] font-semibold" href="#">
+<span class="material-symbols-outlined text-[22px]">grid_view</span>
+<span class="text-[10px] mt-0.5">Katalog</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] py-1 text-[#7f7667] hover:text-[#456553] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">auto_awesome_motion</span>
+<span class="text-[10px] font-medium mt-0.5">Lookbook</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] py-1 text-[#7f7667] hover:text-[#456553] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+<span class="text-[10px] font-medium mt-0.5">Impian</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[56px] py-1 text-[#7f7667] hover:text-[#456553] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">person_outline</span>
+<span class="text-[10px] font-medium mt-0.5">Akun</span>
+</a>
+</div>
+</nav>
+<!-- Interactive script for filter modal -->
+<script>
+    (function() {
+      const modal = document.getElementById('filterModal');
+      const openBtn1 = document.getElementById('openFilterModal');
+      const openBtn2 = document.getElementById('floatingFilterTrigger');
+      const closeBtn = document.getElementById('closeFilterModal');
+      const applyBtn = document.getElementById('applyFilterBtn');
+      const resetBtn = document.getElementById('resetFilterBtn');
+      const backdrop = document.getElementById('modalBackdrop');
+
+      function showModal() {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function hideModal() {
+        if (!modal) return;
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (openBtn1) openBtn1.addEventListener('click', showModal);
+      if (openBtn2) openBtn2.addEventListener('click', showModal);
+      if (closeBtn) closeBtn.addEventListener('click', hideModal);
+      if (applyBtn) applyBtn.addEventListener('click', hideModal);
+      if (resetBtn) resetBtn.addEventListener('click', hideModal);
+      if (backdrop) backdrop.addEventListener('click', hideModal);
+    })();
+  </script>
+</body></html>

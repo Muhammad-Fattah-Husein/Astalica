@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-container":"#ada591","surface-container-lowest":"#ffffff","inverse-primary":"#e9c176","surface-bright":"#fcf9f8","surface-container-low":"#f6f3f2","on-tertiary-fixed":"#201b0e","secondary-container":"#c4e8d1","on-background":"#1c1b1b","on-error-container":"#93000a","surface-canvas":"#FDFBF7","primary-container":"#c5a059","primary-fixed":"#ffdea5","on-primary-fixed-variant":"#5d4201","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#4c4636","surface-container":"#f0eded","error":"#ba1a1a","outline":"#7f7667","on-primary-fixed":"#261900","surface":"#fcf9f8","on-surface-variant":"#4e4639","surface-variant":"#e5e2e1","inverse-on-surface":"#f3f0ef","on-primary":"#ffffff","emerald-hover":"#2C533E","surface-container-highest":"#e5e2e1","background":"#fcf9f8","inverse-surface":"#313030","on-secondary-container":"#496a57","border-champagne":"#E8DEC8","tertiary":"#655e4d","gold-light":"#DFC27D","secondary-fixed":"#c7ebd4","primary-fixed-dim":"#e9c176","error-container":"#ffdad6","on-primary-container":"#4e3700","primary":"#775a19","on-surface":"#1c1b1b","on-tertiary-container":"#403b2b","on-secondary-fixed-variant":"#2d4d3c","on-secondary":"#ffffff","surface-container-high":"#eae7e7","surface-dim":"#dcd9d9","gold-dark":"#A8833E","surface-tint":"#775a19","tertiary-fixed":"#ece2cc","secondary-fixed-dim":"#abcfb8","outline-variant":"#d1c5b4","tertiary-fixed-dim":"#cfc6b0","on-error":"#ffffff","on-secondary-fixed":"#002113","secondary":"#456553"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin":"3rem","space-sm":"0.5rem","gutter-mobile":"1rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1.25rem"},"fontFamily":{"label-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"title-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"display-md-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"display-md":["Playfair Display"],"display-lg":["Playfair Display"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.04em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["26px",{"lineHeight":"34px","fontWeight":"500"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-lg-mobile":["38px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-md-mobile":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-md":["44px",{"lineHeight":"54px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"68px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-canvas/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin"><div class="h-20 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex flex-col items-start focus:outline-none" data-path="beranda" href="#"><span class="font-headline-md text-headline-md tracking-wider text-secondary font-medium uppercase">Astalica</span><span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-primary -mt-1">Haute Hijab Atelier</span></a></div><nav class="hidden xl:flex items-center gap-space-xs p-1 bg-surface-container-low rounded-full" data-active-classes="bg-secondary text-on-secondary font-medium shadow-sm"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="beranda" href="#">Beranda</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-all bg-secondary text-on-secondary font-medium shadow-sm" data-path="katalog-produk" href="#">Katalog Produk</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="tentang-kami" href="#">Tentang Kami</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="layanan" href="#">Layanan</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="warta" href="#">Warta</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-path="hubungi" href="#">Hubungi</a></nav><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center bg-surface-container-lowest rounded-full px-space-md py-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span><input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none w-44 lg:w-56" placeholder="Cari sutra, voile, pashmina..." type="text"/></div><a aria-label="Wishlist" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:text-secondary transition-colors relative" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span></a><a aria-label="Shopping Bag" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:text-secondary transition-colors relative" data-path="tas-belanja" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[9px] flex items-center justify-center">3</span></a><a aria-label="Akun Pengguna" class="pl-1 focus:outline-none" data-path="masuk" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></div></header><main class="w-full pt-20 bg-surface-canvas min-h-screen"><div class="flex flex-col w-full">
+<!-- Editorial Hero & Catalog Intro -->
+<section class="w-full bg-surface-canvas relative overflow-hidden pb-space-lg">
+<!-- Subtle Ambient Glow -->
+<div class="absolute -top-32 right-12 w-96 h-96 rounded-full bg-gradient-to-br from-primary-fixed/30 via-secondary-container/20 to-transparent blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 -left-20 w-80 h-80 rounded-full bg-gradient-to-tr from-gold-light/15 via-surface-container-high/40 to-transparent blur-2xl pointer-events-none"></div>
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin pt-space-lg">
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 mb-space-md">
+<a class="font-label-sm text-label-sm text-outline hover:text-secondary uppercase tracking-widest transition-colors" href="#">Beranda</a>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<a class="font-label-sm text-label-sm text-outline hover:text-secondary uppercase tracking-widest transition-colors" href="#">Katalog Mahakarya</a>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Hijab &amp; Selendang</span>
+</nav>
+<!-- Editorial Title & Overview -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pb-space-lg">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-low mb-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em]">Haute Modestie Artisanal</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg lg:text-display-md text-on-surface font-headline-md tracking-tight leading-tight">
+            Koleksi Mahakarya Hijab &amp; Selendang Sutra
+          </h1>
+<p class="mt-space-sm font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Menghayati kemewahan serat Mulberry Silk murni 100%, pashmina kasmir pegunungan, serta sentuhan voile de luxe bermotif monogram warisan. Ditenun cermat dengan ketelitian adibusana untuk perempuan berjiwa teduh nan agung.
+          </p>
+</div>
+<!-- Meta Count & Sorting Selector -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md lg:self-end">
+<div class="px-space-md py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap">
+            Menampilkan <span class="font-bold text-secondary">18 Koleksi</span> Terpilih
+          </div>
+<!-- Sorting Dropdown Pill -->
+<div class="relative inline-block text-left w-full sm:w-auto">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-space-lg py-2.5 rounded-full shadow-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Urutkan:</span>
+<select class="bg-transparent font-title-md text-title-md text-on-surface focus:outline-none cursor-pointer pr-4 appearance-none" id="catalog-sort">
+<option value="terbaru">Terbaru &amp; Kurasi Musim</option>
+<option value="terpopuler">Koleksi Terpopuler</option>
+<option value="harga-tinggi">Harga: Mahakarya Tertinggi</option>
+<option value="harga-rendah">Harga: Terendah ke Tertinggi</option>
+<option value="limited">Edisi Terbatas Atelier</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] pointer-events-none -ml-3">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Category Tab Pills -->
+<div class="w-full overflow-x-auto pb-2 scrollbar-none">
+<div class="flex items-center gap-space-xs min-w-max p-1.5 bg-surface-container-low rounded-full">
+<button class="filter-tab-pill px-space-lg py-2 rounded-full font-label-md text-label-md bg-secondary text-on-secondary shadow-sm transition-all" data-category="all">
+            Semua Koleksi (18)
+          </button>
+<button class="filter-tab-pill px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all" data-category="sutra">
+            Sutra Mulberry Satin
+          </button>
+<button class="filter-tab-pill px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all" data-category="voile">
+            Voile de Luxe Heritage
+          </button>
+<button class="filter-tab-pill px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all" data-category="cashmere">
+            Pashmina Cashmere Silk
+          </button>
+<button class="filter-tab-pill px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all" data-category="monogram">
+            Monogram Royal Series
+          </button>
+<button class="filter-tab-pill px-space-lg py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all" data-category="bridal">
+            Bridal &amp; Akad Veil
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Catalog Workspace: Sidebar + 3-4 Column Grid -->
+<section class="w-full bg-surface-canvas py-space-lg">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Filter Sidebar (3 Columns on Large Screens) -->
+<aside class="lg:col-span-3 w-full flex flex-col gap-space-lg bg-surface-container-lowest p-space-lg rounded-[2rem] shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Penyaring Koleksi</h2>
+</div>
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-primary transition-colors" id="filter-reset-btn">
+              Reset Semua
+            </button>
+</div>
+<!-- Filter Group 1: Kategori Potongan -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Tipe Siluet &amp; Potongan</span>
+<div class="flex flex-col gap-2.5">
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">Segi Empat (Square)</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline">9</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">Pashmina / Shawl</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline">5</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">Bergo Couture Instan</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline">2</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">Khimar Syar'i Eksklusif</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline">1</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="flex items-center gap-3">
+<input class="w-4 h-4 rounded text-secondary accent-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-secondary transition-colors">Bridal Veil Pengantin</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline">1</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-surface-container w-full"></div>
+<!-- Filter Group 2: Bahan & Tekstur Alami -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Bahan &amp; Kemurnian Serat</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-space-md py-1.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">
+                Pure Mulberry Silk 100%
+              </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                Ultra-Fine Voile Paris
+              </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                Cashmere Silk Blend
+              </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                Chiffon Crepe Royale
+              </button>
+</div>
+</div>
+<div class="h-px bg-surface-container w-full"></div>
+<!-- Filter Group 3: Palet Nuansa Warna -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Palet Warna Kurasi</span>
+<span class="font-label-sm text-label-sm text-outline" id="selected-color-label">Semua Nada</span>
+</div>
+<div class="grid grid-cols-4 gap-2.5 pt-1">
+<!-- Swatch 1: Emas Zamrud -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Emas Zamrud">
+<span class="w-8 h-8 rounded-full bg-secondary ring-2 ring-primary-container ring-offset-2 flex items-center justify-center transition-transform hover:scale-110 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-on-secondary">check</span>
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Zamrud</span>
+</button>
+<!-- Swatch 2: Putih Mutiara / Broken White -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Putih Mutiara">
+<span class="w-8 h-8 rounded-full bg-surface-bright shadow-sm flex items-center justify-center transition-transform hover:scale-110">
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Mutiara</span>
+</button>
+<!-- Swatch 3: Sage Botanical -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Sage Botanical">
+<span class="w-8 h-8 rounded-full bg-secondary-container shadow-sm flex items-center justify-center transition-transform hover:scale-110">
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Sage</span>
+</button>
+<!-- Swatch 4: Dusty Rose -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Dusty Rose">
+<span class="w-8 h-8 rounded-full bg-tertiary-fixed shadow-sm flex items-center justify-center transition-transform hover:scale-110">
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Rose</span>
+</button>
+<!-- Swatch 5: Champagne Gold -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Champagne Gold">
+<span class="w-8 h-8 rounded-full bg-primary-fixed shadow-sm flex items-center justify-center transition-transform hover:scale-110">
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Champagne</span>
+</button>
+<!-- Swatch 6: Midnight Onyx -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Midnight Onyx">
+<span class="w-8 h-8 rounded-full bg-inverse-surface shadow-sm flex items-center justify-center transition-transform hover:scale-110">
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Onyx</span>
+</button>
+<!-- Swatch 7: Terakota Hangat -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Terakota Hangat">
+<span class="w-8 h-8 rounded-full bg-primary shadow-sm flex items-center justify-center transition-transform hover:scale-110">
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Terakota</span>
+</button>
+<!-- Swatch 8: Royal Taupe -->
+<button class="group flex flex-col items-center gap-1 focus:outline-none" title="Royal Taupe">
+<span class="w-8 h-8 rounded-full bg-tertiary shadow-sm flex items-center justify-center transition-transform hover:scale-110">
+</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate w-full text-center">Taupe</span>
+</button>
+</div>
+</div>
+<div class="h-px bg-surface-container w-full"></div>
+<!-- Filter Group 4: Rentang Harga (IDR Slider) -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Rentang Harga Investasi</span>
+<div class="flex flex-col gap-3">
+<input class="w-full accent-secondary bg-surface-container-high rounded-full h-1.5 cursor-pointer" max="2850000" min="450000" step="50000" type="range" value="1850000"/>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span class="px-space-sm py-1 bg-surface-container rounded-full text-xs font-medium">Rp 450.000</span>
+<span class="text-outline text-xs">hingga</span>
+<span class="px-space-sm py-1 bg-surface-container rounded-full text-xs font-medium">Rp 2.850.000</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-surface-container w-full"></div>
+<!-- Filter Group 5: Finishing Tepi Mahakarya -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Finishing Tepi Pengerjaan</span>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="accent-secondary text-secondary" name="finishing" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">Semua Sentuhan Tepi</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="accent-secondary text-secondary" name="finishing" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">Hand-Rolled Hemming (Jahit Tangan)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="accent-secondary text-secondary" name="finishing" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">Laser Cut Scallop Presisi</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="accent-secondary text-secondary" name="finishing" type="radio"/>
+<span class="font-body-sm text-body-sm text-on-surface">Crochet Picot Benang Emas</span>
+</label>
+</div>
+</div>
+<!-- Action Buttons (Rounded Full) -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-3 px-space-lg rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md tracking-wider transition-all shadow-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+              Terapkan Filter
+            </button>
+<button class="w-full py-2.5 px-space-lg rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-all text-center">
+              Atur Ulang Pilihan
+            </button>
+</div>
+</aside>
+<!-- Right Product Grid Area (9 Columns on Large Screens) -->
+<div class="lg:col-span-9 flex flex-col gap-space-lg">
+<!-- Active Filter Pill Chips -->
+<div class="flex items-center flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-1">Filter Aktif:</span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm shadow-sm">
+              Sutra Mulberry
+              <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm shadow-sm">
+              Segi Empat (120x120 cm)
+              <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm shadow-sm">
+              Maks. Rp 2.850.000
+              <span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span>
+</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline ml-2">Bersihkan</button>
+</div>
+<!-- Product Card Grid: 3 Columns on Desktop -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<!-- Card 1: Lembah Swarna Mulberry Square -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High fashion portrait of an elegant Indonesian modest muse wearing an exquisite olive and emerald gold-patterned pure Mulberry silk square hijab, luxurious soft fabric drape, studio lighting, beige background, couture editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx5Ba8TF-J8bI6ZLmHh35d4SSDCgOlPkGMoCH_LqlS2SVFN2IPilC-NF5Gfud2YUaC7sgGIUnInDefIJ_Y6cXghjBb14fnYHeYEfaNl-meOAQ-q9SXrEW8SGWldq21-efKan6PLn9I-5nhgVdEFkSuOwnOk_zTKLNyaRf4LAqyPMU6oLoDITH1lhVGj4jNDPBYC7NOiuRb-VhyHCpjipmuZ2hZSpU02XAzs5TJeBMT"/>
+<div class="absolute top-3 left-3 flex flex-col gap-1.5">
+<span class="px-space-md py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+                    Bestseller Atelier
+                  </span>
+<span class="px-space-md py-1 rounded-full bg-surface-canvas/90 backdrop-blur-md text-secondary font-label-sm text-label-sm">
+                    100% Sutra Organik
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Product Info -->
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Segi Empat • 120 x 120 cm</span>
+<!-- Swatches -->
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-secondary ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed"></span>
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Lembah Swarna Mulberry Square
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Tenunan sutra mulberry 19-momme lembut bertekstur satin kemilau dengan detail jahitan tepi hand-rolled hemming khas atelier.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 1.250.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 2: Maharani Voile Monogram Rose -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Chic editorial close-up of a sophisticated woman wearing a dusty rose and soft blush monogram ultra-fine voile scarf, delicate gold brooch pin, natural refined morning light, luxury modest lookbook aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATB-nF-gKfhStbThMNiTN_4qJww-lZyVvHvYyBH1mQZFggwMW-p4X90RNy4mLHaGh3sII6swAoS-SPCENsiMo_LGeRyLaiIn9qaCpwKkk1HCvE2rXx2AKWryk2B6E9NsNz0_hs2kaLMLMlV95aAN6f8AD_MSt3yNO3suBs0pdTiqs0je91M7tMEBZqRdqjCORSRZ7PDrkFLom1Gm1YQX9Rw-KYrRkCVdCMMOC-qtdn"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm">
+                    New Arrival
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Segi Empat • 118 x 118 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-surface-bright"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Maharani Voile Monogram Rose
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Serat Ultrafine Voile Paris yang sangat bernapas, tegak sempurna di dahi tanpa kusut, dengan cetakan monogram emas klasik.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 650.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 3: Samudra Pashmina Silk Emerald -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Graceful model draped in deep forest emerald green cashmere silk shawl, rich textures, flowing fabric folds, glowing warm champagne highlights, aristocratic minimalist portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ElMvQTqjQSXMudvmuLiKZ5weNbvkCJu8VwpxSO2MUqz90o9fPRCnQQ5EnXnRMaig95pke5E31ot0LV9uxEWY6ZeBTO6Be73ydjiE68cL2-cJexxtQ1byL90qDE1nscbTeAk6aysr-3GYGOWHvuAoANFY3t_bYnDv7LVn-4tjIum46ePSBfFJX_Y0FvIYaSWBw6lRdxrY6ywsJMyY1TZWoD30Z1L0CB25csgjJlrE"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-gradient-to-r from-gold-light to-gold-dark text-on-secondary-fixed font-label-sm text-label-sm shadow-sm font-semibold">
+                    Edisi Terbatas (50 Pcs)
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Pashmina • 185 x 75 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-secondary ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-inverse-surface"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Samudra Pashmina Silk Emerald
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Perpaduan 70% Mulberry Silk dan 30% Fine Cashmere memberikan kehangatan bersahaja sekaligus kilau mewah yang jatuh anggun.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 1.850.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 4: Cahaya Kirana Bridal Veil -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Couture bridal hijab setting featuring an ethereal ivory pearl-embroidered tulle wedding veil, sheer cascading lace trimming, warm candlelit ambiance, immaculate artisanal luxury" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDulS75WOHNI9Zend8Te-afPFH7PBMXgIjd2sJ6dfrytJRImGZOil11orL3cdmwVQ45zadaL6Xnd7HxbiLfUFIsdYTP7agXbNRDLoEPPXbKe32tj_PxQpZdFsT-rbw96qnAwrafdpiuEqP_tRWQaQCC8Co7tK7qrTYMuFzt-HgQxs4GEALBj2prMG4xzjyULNh7k8uBDTYh8GVxf9qW_piR21-HeE8QCtd0Ds8AyatC"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-surface-canvas text-primary font-label-sm text-label-sm shadow-sm">
+                    Koleksi Akad &amp; Pengantin
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Veil Kerudung • 220 x 140 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-surface-bright ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Cahaya Kirana Bridal Veil
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Tulle sutra ultra-transparan dihiasi untaian mutiara air tawar dan bordir sulam tangan bernuansa keanggunan sakral pelaminan.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 2.450.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 5: Nirmala Raw Silk Shawl -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Portrait of an elegant woman wearing a warm terracotta and sand colored raw silk shawl, tactile slub texture, soft earth tones, architectural minimal concrete background with golden sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADH8bsxhJCB6ESMojsvEsAnLG-KRCAqEeDb9s-nmDelAfHtWuN24_hM66y1yIy9CuSvDoZm5rHyqRGzQnzGssjM6eROmQ6FW_eleILEZCMb04Iv7XDdrohsS_XLvC-3sg8lrcRaSPi8bO4aB0YLAgvw69RRZJjuu8topOT4XI0kH8I3DRBsmbFTREPQfztA2omQ4wK-4Vx5XGvb_ThnqUxhtSvq-WQdguLk3S-VotP"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-surface-canvas/90 backdrop-blur-md text-secondary font-label-sm text-label-sm">
+                    Tenun Tangan ATBM
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Selendang Shawl • 190 x 70 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-primary ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Nirmala Raw Silk Shawl
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Serat sutra mentah organik bertekstur slub alami yang sejuk, menghasilkan karakter busana bersahaja namun berkarisma tinggi.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 980.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 6: Gitanjali Pure Voile Champagne -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Chic modest woman wearing a luminous champagne gold square voile hijab with clean crisp drape, subtle golden edge picot crochet, bright warm sunlit atelier interior, clean high fashion framing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAcjvkLFjZQDakbxrfRCC6mcza38hEkljkdYRTS-rO15IA675iY-MxYkei4iyXKQ0SaLeqpnm-8TdkJmdtoVwPEoSowM6NpMbCzYLHaPelFw-BMBth5RCGk5C678WhEQPke3MdNAICoE1yBeI0Cis5pFGfx-TMEAIMD5gszgb1cYyszDBDKpQEsFS40ICa2MSz6IZQo3HWVwB7_bg-pWeaQQWhVOx8iNTxrLURNRhh"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+                    Favorit Pelanggan
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Segi Empat • 120 x 120 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-primary-fixed ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-surface-bright"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Gitanjali Pure Voile Champagne
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Voile Jepang berkelas tinggi dengan kelembutan layaknya sutra dan pinggiran crochet picot benang emas yang elegan.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 720.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 7: Roro Jonggrang Heritage Crepe -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High fashion portrait of a model in a deep charcoal onyx crepe chiffon hijab, intricate subtle batik geometric border print, warm dramatic spotlighting, high luxury Indonesian aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ_gUGk_6fCVL81BDwHGoOSElqB7BfwpJpX5t_Z0C48YnZoGSOGLTHsW0jzkLNkjXWuFOLNrUlOdVFdNt1WKablibj97s6enWM--8SJbAmnhGbCN6V_6PgNnZ_0ys0S7KVe0Kn_TokI4sGtuS6-JKZ0xW4nZFZx2yuwhTLK4v-GIgiWBZdkYNFa6EJijhFCJUZzSXsQb87VEd8fj4F3CM3pgW7ozYiGAaSrcLxs_83"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">
+                    Heritage Batik Series
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Segi Empat • 125 x 125 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-inverse-surface ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Roro Jonggrang Heritage Crepe
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Kain sutra sifon krep berserat pasir mikro yang anti-geser dengan motif terinspirasi relief candi nusantara klasik.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 890.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 8: Saraswati Gold Thread Scarf -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Refined woman in a sage botanical modest scarf woven with real subtle metallic gold lurex threads, graceful silhouette against a neutral ivory marble archway, soft daylight, luxury modest lifestyle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfxmWLkyjikZHf5uKvHVCQ1wl7P_SZ9do4nZjcPqc6UZnxoNNMo0JQ_ecOFPWgWQyQDJz5OKFk4DhLt_sGXSE7RyM43p0PjvxxzCqW6iuWfklM3gyl9TIDOWDiA7vt-wx18bhUNTqBJi5-Gu1w5yfaudsCIbGQtW6WASJhd6EEiAmapXiWMuuQyg3mgjA8HnXGXYbAxWZwKwyV9fSOrzDgo9DwMuAwQtn99lEh5A15"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm shadow-sm font-semibold">
+                    Benang Songket Emas
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Selendang • 180 x 75 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-secondary-container ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Saraswati Gold Thread Scarf
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Harmoni benang sutra mulberry celup tanaman sage dengan sisipan kawat emas halus yang memantulkan cahaya redup temaram.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 1.450.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+<!-- Card 9: Al-Hambra Monogram Pashmina -->
+<article class="group bg-surface-container-lowest rounded-[2rem] p-space-sm flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Stunning model wearing an opulent warm taupe and antique gold monogram jacquard silk pashmina shawl draped across shoulder, soft ambient sunlight in a classical courtyard, quiet luxury mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu2SJVNwnpMTm2VD_CN8rGIW51k5Jutfd116iZ3J0Ix_dDlaIRDKkf153EjiKHodB31kr4AhYNgpEk5LlnfaNsSzQuPWCN7HqW2yaVzuW0QO03N4MQw_8xfhWDFZ3AfXnWuUUs-FKwl0x2CCmvfht1olL52sElqPsVF2KTbrxkMHpHxJgglqGcC904vp7PbhLnTThPyj9eoF92CkSivpQlai3dS18ZKNBVeaKw_-RU"/>
+<div class="absolute top-3 left-3">
+<span class="px-space-md py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm">
+                    Signature Jacquard
+                  </span>
+</div>
+<button aria-label="Simpan ke Wishlist" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-canvas/90 backdrop-blur-md text-on-surface-variant hover:text-error hover:bg-surface-canvas transition-colors flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="px-space-sm pb-space-sm flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Pashmina • 190 x 75 cm</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-tertiary ring-1 ring-primary-container ring-offset-1"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed"></span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1">
+                    Al-Hambra Monogram Pashmina
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+                    Tenunan Jacquard sutra dobel-sisi dengan motif geometris Andalusia yang tampak dua rona kontras memesona saat dibalutkan.
+                  </p>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Harga Resmi</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold">Rp 1.680.000</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                    Tas Belanja
+                  </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination & Infinite Explore Controls (All Rounded-Full) -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xl pb-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Menampilkan <span class="font-semibold text-on-surface">1 - 9</span> dari 18 Koleksi
+            </span>
+<div class="flex items-center gap-2">
+<button aria-label="Halaman Sebelumnya" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm">
+                1
+              </button>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">
+                2
+              </button>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">
+                3
+              </button>
+<button aria-label="Halaman Selanjutnya" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<button class="px-space-lg py-2.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-low text-secondary font-label-md text-label-md shadow-sm transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+              Muat Koleksi Lainnya
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Educational Guide & Bespoke Concierge Section -->
+<section class="w-full bg-surface-container-low py-space-xl mt-space-lg">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-primary font-semibold">Atelier Knowledge &amp; Guidance</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 font-headline-md">
+          Panduan Karakter Serat Kemewahan
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Pahami setiap sentuhan drape, sirkulasi udara, serta kilau bahan alami agar pilihan Anda selaras dengan acara istimewa dan kenyamanan harian.
+        </p>
+</div>
+<!-- Comparison Cards (Bento Style 3 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- Fiber 1: Pure Mulberry Silk -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-space-md">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Grade 6A Mulberry Silk</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Sutra Murni Kemilau</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Memiliki kilau mutiara alami yang dinamis, asam amino organik ramah rambut, serta drape yang sangat mewah untuk jamuan malam atau resepsi agung.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md">
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Kekuatan Jatuh (Drape):</span>
+<span class="font-semibold text-secondary">Sangat Mengalir (Fluid)</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Ketebalan:</span>
+<span class="font-semibold text-secondary">16 - 19 Momme</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Perawatan:</span>
+<span class="font-semibold text-primary">Dry Clean / Sabun Lerak</span>
+</div>
+</div>
+</div>
+<!-- Fiber 2: Voile de Luxe Paris -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">air</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Ultra-Fine Cotton Blend</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Voile Paris Adibusana</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Ditenun dari kapas serat panjang super rapat. Tegak sempurna tanpa bantuan hairspray, anti-dengung di telinga, dan sangat sejuk sepanjang hari.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md">
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Kekuatan Tegak Dahi:</span>
+<span class="font-semibold text-secondary">Presisi Maksimal (Crisp)</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Sirkulasi Udara:</span>
+<span class="font-semibold text-secondary">Tinggi (Breathable)</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Perawatan:</span>
+<span class="font-semibold text-primary">Cuci Tangan Halus</span>
+</div>
+</div>
+</div>
+<!-- Fiber 3: Cashmere Silk Blend -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-space-md">
+<span class="material-symbols-outlined text-[24px]">cloud_download</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Himalayan Wool &amp; Silk</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Pashmina Kasmir Sutra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Tekstur selembut awan yang memberikan kenyamanan termal istimewa saat berada di ruangan berpenyejuk atau perjalanan luar negeri yang sejuk.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-md">
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Kekenyalan (Tactile):</span>
+<span class="font-semibold text-secondary">Ultra-Soft Velvet Touch</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Kerapatan:</span>
+<span class="font-semibold text-secondary">200 Count Ring Shawl</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span class="text-outline">Perawatan:</span>
+<span class="font-semibold text-primary">Dry Clean Only</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Concierge Banner (Bespoke Whatsapp Stylist) -->
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-space-lg lg:p-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-sm relative overflow-hidden">
+<div class="flex flex-col sm:flex-row items-center gap-space-lg z-10 text-center sm:text-left">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[36px]">support_agent</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container mb-2">
+<span class="w-2 h-2 rounded-full bg-emerald-hover"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Private Stylist Online (09.00 - 21.00 WIB)</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-headline-md">
+              Butuh Panduan Padu-Padan Busana &amp; Warna Khusus?
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-1">
+              Konsultan gaya Astalica siap membantu Anda mencocokkan hijab dengan warna kebaya, gaun pesta, atau hampers kemasan kado kriya pribadi Anda.
+            </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm shrink-0 z-10 w-full sm:w-auto">
+<a class="w-full sm:w-auto px-space-xl py-3.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md tracking-wider flex items-center justify-center gap-2 shadow-md transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+            Konsultasi WhatsApp Concierge
+          </a>
+<button class="w-full sm:w-auto px-space-lg py-3.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all">
+            Jadwalkan Private Viewing
+          </button>
+</div>
+<!-- Ambient Watermark -->
+<div class="absolute -right-8 -bottom-12 opacity-5 pointer-events-none select-none font-headline-md text-[180px] font-bold text-secondary">
+          ASTALICA
+        </div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interactions for the catalog page
+  document.addEventListener('DOMContentLoaded', () => {
+    // Quick Category Tab Switching
+    const categoryTabs = document.querySelectorAll('.filter-tab-pill');
+    categoryTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        categoryTabs.forEach(t => {
+          t.classList.remove('bg-secondary', 'text-on-secondary', 'shadow-sm');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.remove('text-on-surface-variant');
+        tab.classList.add('bg-secondary', 'text-on-secondary', 'shadow-sm');
+      });
+    });
+
+    // Wishlist Toggle
+    const wishlistBtns = document.querySelectorAll('.wishlist-btn');
+    wishlistBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+          if (isFilled) {
+            icon.style.fontVariationSettings = "'FILL' 0";
+            btn.classList.remove('text-error');
+          } else {
+            icon.style.fontVariationSettings = "'FILL' 1";
+            btn.classList.add('text-error');
+          }
+        }
+      });
+    });
+
+    // Reset button feedback
+    const resetBtn = document.getElementById('filter-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        const checkboxes = document.querySelectorAll('aside input[type="checkbox"]');
+        checkboxes.forEach(cb => cb.checked = false);
+        const radio = document.querySelector('aside input[type="radio"]');
+        if (radio) radio.checked = true;
+      });
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-low"><div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl mb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-wider text-secondary uppercase font-medium">Astalica</span><span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-primary">Haute Modestie</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Menghadirkan keanggunan busana muslimah kontemporer lewat serat sutra murni, sentuhan kriya bersahaja, dan estetika abadi untuk perempuan berkelas.</p><div class="flex items-center gap-space-sm pt-space-xs"><div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors"><span class="material-symbols-outlined text-[18px]">spa</span></div><div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors"><span class="material-symbols-outlined text-[18px]">diamond</span></div><div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors"><span class="material-symbols-outlined text-[18px]">auto_awesome</span></div></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Koleksi Mewah</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="katalog-produk" href="#">Royal Mulberry Silk</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="katalog-produk" href="#">Voile Couture Monogram</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="katalog-produk" href="#">Pleated Chiffon Deluxe</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="katalog-produk" href="#">Brocade Heritage Shawl</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="katalog-produk" href="#">Atelier Signature Pins</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Layanan Tamu</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="layanan" href="#">Panduan Ukuran &amp; Serat</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="layanan" href="#">Bespoke Embroidery</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="layanan" href="#">Pengiriman &amp; Kemasan Kado</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="hubungi" href="#">Lacak Pesanan</a></li><li class="py-0.5"><a class="hover:text-primary transition-colors" data-path="hubungi" href="#">Konsultasi Pribadi</a></li></ul></div><div class="lg:col-span-4 flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Warta Eksklusif Astalica</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Dapatkan undangan pratayang koleksi terbatas, warta gaya hidup modest, dan akses pra-pesan istimewa langsung di kotak masuk Anda.</p><div class="flex flex-col sm:flex-row items-center gap-space-xs pt-space-xs"><input class="w-full sm:flex-1 bg-surface-container-lowest font-body-sm text-body-sm text-on-surface px-space-md py-2.5 rounded-full placeholder:text-outline focus:outline-none shadow-[0_2px_8px_rgba(0,0,0,0.02)]" placeholder="Alamat surel Anda..." type="email"/><button class="w-full sm:w-auto px-space-lg py-2.5 rounded-full bg-secondary hover:bg-emerald-hover text-on-secondary font-label-md text-label-md transition-all shadow-sm" type="button">Langganan</button></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><p>© 2025 Astalica Luxury Modest Atelier. Hak cipta dilindungi.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="tentang-kami" href="#">Kebijakan Privasi</a><a class="hover:text-primary transition-colors" data-path="tentang-kami" href="#">Syarat &amp; Ketentuan</a><a class="hover:text-primary transition-colors" data-path="hubungi" href="#">Atelier Directory</a></div></div></div></footer></body></html>
