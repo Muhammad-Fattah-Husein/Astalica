@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { executeDb, isGoogleSheetsConnected } from '@/lib/db';
+import { executeDb, getDatabaseProvider } from '@/lib/db';
 import { Users, ShieldAlert, Newspaper, PlusCircle, ArrowRight, Database, ExternalLink, ShoppingBag, Clock } from 'lucide-react';
 
 export default async function DashboardOverviewPage() {
-  const sheetsConnected = isGoogleSheetsConnected();
+  const dbProvider = getDatabaseProvider();
   const usersResult = await executeDb<any[]>('query', 'Users');
   const rolesResult = await executeDb<any[]>('query', 'Roles');
   const newsResult = await executeDb<any[]>('query', 'News');
@@ -85,13 +85,29 @@ export default async function DashboardOverviewPage() {
               Database Backend
             </span>
             <p className="text-base font-serif font-bold text-on-surface mt-1">
-              {sheetsConnected ? 'Google Sheets' : 'Mode Lokal (JSON)'}
+              {dbProvider === 'supabase'
+                ? 'Supabase'
+                : dbProvider === 'apps-script'
+                  ? 'Google Sheets'
+                  : 'Mode Lokal (JSON)'}
             </p>
-            <span className={`text-[11px] mt-1 inline-block ${sheetsConnected ? 'text-green-700' : 'text-amber-700 font-medium'}`}>
-              {sheetsConnected ? 'via Apps Script Web App' : 'Belum terhubung ke Sheets'}
+            <span
+              className={`text-[11px] mt-1 inline-block ${
+                dbProvider === 'local' ? 'text-amber-700 font-medium' : 'text-green-700'
+              }`}
+            >
+              {dbProvider === 'supabase'
+                ? 'PostgreSQL Cloud Aktif'
+                : dbProvider === 'apps-script'
+                  ? 'via Apps Script Web App'
+                  : 'Mode fallback lokal'}
             </span>
           </div>
-          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${sheetsConnected ? 'bg-green-100 text-green-800' : 'bg-amber-100 text-amber-800'}`}>
+          <div
+            className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
+              dbProvider === 'local' ? 'bg-amber-100 text-amber-800' : 'bg-green-100 text-green-800'
+            }`}
+          >
             <Database className="w-6 h-6" />
           </div>
         </div>
@@ -222,9 +238,21 @@ export default async function DashboardOverviewPage() {
             </h3>
             <div className="space-y-2.5 text-xs text-on-surface-variant">
               <div className="flex justify-between py-1.5 border-b border-border-champagne/40">
-                <span>Google Apps Script</span>
-                <span className={`font-mono font-semibold ${sheetsConnected ? 'text-emerald-700' : 'text-amber-700'}`}>
-                  {sheetsConnected ? 'Tersambung' : 'Menunggu .env.local'}
+                <span>Database Utama</span>
+                <span
+                  className={`font-mono font-semibold ${
+                    dbProvider === 'supabase'
+                      ? 'text-emerald-700'
+                      : dbProvider === 'apps-script'
+                        ? 'text-sky-700'
+                        : 'text-amber-700'
+                  }`}
+                >
+                  {dbProvider === 'supabase'
+                    ? 'Supabase PostgreSQL'
+                    : dbProvider === 'apps-script'
+                      ? 'Google Apps Script'
+                      : 'Local JSON Fallback'}
                 </span>
               </div>
               <div className="flex justify-between py-1.5 border-b border-border-champagne/40">

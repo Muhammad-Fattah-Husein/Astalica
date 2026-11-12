@@ -1,6 +1,7 @@
 import os from 'os';
 import fs from 'fs/promises';
 import path from 'path';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
 export interface QueryOptions {
   [key: string]: any;
@@ -12,13 +13,63 @@ export interface DbResult<T = any> {
   error?: string;
 }
 
-const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL;
-const APPS_SCRIPT_SECRET = process.env.APPS_SCRIPT_SECRET;
 const LOCAL_DB_PATH = path.join(process.cwd(), 'data', 'local-database.json');
 const TMP_DB_PATH = path.join(os.tmpdir(), 'astalica-local-database.json');
 
+const SUPABASE_TABLES: Record<string, string> = {
+  Roles: 'roles',
+  Users: 'users',
+  News: 'news',
+  Orders: 'orders',
+  Inquiries: 'inquiries',
+  Subscribers: 'subscribers',
+};
+
+let _supabaseAdmin: SupabaseClient | null = null;
+let _supabaseCacheKey = '';
+
+function getSupabaseCredentials() {
+  const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+  return { url, key };
+}
+
+function getSupabaseAdmin(): SupabaseClient | null {
+  const { url, key } = getSupabaseCredentials();
+  if (!url.startsWith('http') || !key) {
+    return null;
+  }
+
+  const cacheKey = `${url}::${key.slice(0, 12)}`;
+  if (!_supabaseAdmin || _supabaseCacheKey !== cacheKey) {
+    _supabaseAdmin = createClient(url, key, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+      global: {
+        fetch: (input, init) => fetch(input, { ...init, cache: 'no-store' }),
+      },
+    });
+    _supabaseCacheKey = cacheKey;
+  }
+
+  return _supabaseAdmin;
+}
+
+export function isSupabaseConnected(): boolean {
+  const { url, key } = getSupabaseCredentials();
+  return Boolean(url.startsWith('http') && key);
+}
+
 export function isGoogleSheetsConnected(): boolean {
   return Boolean(process.env.APPS_SCRIPT_URL && process.env.APPS_SCRIPT_URL.startsWith('http'));
+}
+
+export function getDatabaseProvider(): 'supabase' | 'apps-script' | 'local' {
+  if (isSupabaseConnected()) return 'supabase';
+  if (isGoogleSheetsConnected()) return 'apps-script';
+  return 'local';
 }
 
 // Initial seed data for fallback local storage
@@ -160,10 +211,104 @@ async function saveLocalDatabase(data: Record<string, any[]>): Promise<void> {
   }
 }
 
+async function executeSupabase<T = any>(
+  client: SupabaseClient,
+  action: 'query' | 'insert' | 'update' | 'delete',
+  table: string,
+  data?: any,
+  query?: QueryOptions
+): Promise<DbResult<T>> {
+  const pgTable = SUPABASE_TABLES[table] || table.toLowerCase();
+
+  if (action === 'query') {
+    let builder = client.from(pgTable).select('*');
+    if (query && Object.keys(query).length > 0) {
+      for (const [key, val] of Object.entries(query)) {
+        if (val !== undefined && val !== null) {
+          builder = builder.eq(key, val);
+        }
+      }
+    }
+    const { data: rows, error } = await builder;
+    if (error) {
+      return { success: false, error: error.message };
+    }
+    return { success: true, data: (rows || []) as unknown as T };
+  }
+
+  if (action === 'insert') {
+    const item = { ...data };
+    if (!item.id) {
+      item.id = `${table.toLowerCase()}-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    }
+    const now = new Date().toISOString();
+    if (!item.created_at) item.created_at = now;
+    item.updated_at = now;
+
+    const { data: inserted, error } = await client
+      .from(pgTable)
+      .insert(item)
+      .select()
+      .single();
+
+    if (error) {
+      return { success: false, error: error.message };
+    }
+    return { success: true, data: inserted as unknown as T };
+  }
+
+  if (action === 'update') {
+    const targetId = data?.id || query?.id;
+    if (!targetId) return { success: false, error: 'Missing ID for update' };
+
+    const { id: _ignoreId, ...rest } = data || {};
+    const updatePayload = {
+      ...rest,
+      updated_at: new Date().toISOString(),
+    };
+
+    const { data: updated, error } = await client
+      .from(pgTable)
+      .update(updatePayload)
+      .eq('id', String(targetId))
+      .select()
+      .maybeSingle();
+
+    if (error) {
+      return { success: false, error: error.message };
+    }
+    if (!updated) {
+      return { success: false, error: 'Record not found' };
+    }
+    return { success: true, data: updated as unknown as T };
+  }
+
+  if (action === 'delete') {
+    const id = data?.id || data;
+    if (!id) return { success: false, error: 'Missing ID for delete' };
+
+    const { data: deleted, error } = await client
+      .from(pgTable)
+      .delete()
+      .eq('id', String(id))
+      .select('id');
+
+    if (error) {
+      return { success: false, error: error.message };
+    }
+    if (!deleted || deleted.length === 0) {
+      return { success: false, error: 'Record not found' };
+    }
+    return { success: true, data: { id: String(id), deleted: true } as unknown as T };
+  }
+
+  return { success: false, error: `Invalid action: ${action}` };
+}
+
 /**
  * Universal Database Bridge
- * Automatically uses Google Apps Script Web App if configured,
- * otherwise falls back to local database storage for seamless local testing.
+ * Automatically uses Supabase PostgreSQL if configured, otherwise Google Apps Script,
+ * otherwise falls back to local JSON storage.
  */
 export async function executeDb<T = any>(
   action: 'query' | 'insert' | 'update' | 'delete',
@@ -171,14 +316,26 @@ export async function executeDb<T = any>(
   data?: any,
   query?: QueryOptions
 ): Promise<DbResult<T>> {
-  // If Google Apps Script is configured with valid URL
-  if (APPS_SCRIPT_URL && APPS_SCRIPT_URL.startsWith('http')) {
+  // 1. Primary: Supabase PostgreSQL
+  const supabase = getSupabaseAdmin();
+  if (supabase) {
     try {
-      const response = await fetch(APPS_SCRIPT_URL, {
+      return await executeSupabase<T>(supabase, action, table, data, query);
+    } catch (err: any) {
+      return { success: false, error: err?.message || 'Supabase request failed' };
+    }
+  }
+
+  // 2. Legacy optional bridge: Google Apps Script
+  const appsScriptUrl = process.env.APPS_SCRIPT_URL;
+  const appsScriptSecret = process.env.APPS_SCRIPT_SECRET;
+  if (appsScriptUrl && appsScriptUrl.startsWith('http')) {
+    try {
+      const response = await fetch(appsScriptUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          secret: APPS_SCRIPT_SECRET,
+          secret: appsScriptSecret,
           action,
           table,
           data,
