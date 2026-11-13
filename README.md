@@ -92,53 +92,6 @@ Database Astalica menggunakan 6 tabel relasional yang telah dioptimasi dengan in
 
 ---
 
-## 🚀 Panduan Menjalankan Proyek Secara Lokal
-
-### Prasyarat
-- [Node.js](https://nodejs.org) versi 18.18 atau lebih baru.
-- Akun GitHub & Supabase (opsional jika ingin menggunakan cloud DB pribadi).
-
-### 1. Clone Repositori
-```bash
-git clone https://github.com/Muhammad-Fattah-Husein/Astalica.git
-cd Astalica
-```
-
-### 2. Instalasi Dependensi
-```bash
-npm install
-```
-
-### 3. Konfigurasi Variabel Lingkungan
-Salin file `.env.example` menjadi `.env.local`:
-```bash
-cp .env.example .env.local
-```
-Isi variabel berikut:
-```env
-# Database Supabase
-SUPABASE_URL="https://driuoafconaywlvkwroo.supabase.co"
-SUPABASE_SECRET_KEY="sb_secret_your_secret_key"
-
-# Kunci JWT & URL Aplikasi
-AUTH_SECRET="kunci-rahasia-jwt-anda"
-NEXT_PUBLIC_APP_URL="http://localhost:3000"
-```
-
-### 4. Jalankan Server Pengembangan
-```bash
-npm run dev
-```
-Buka browser di [http://localhost:3000](http://localhost:3000).
-
-### 5. Build untuk Produksi
-```bash
-npm run build
-npm run start
-```
-
----
-
 ## 📂 Struktur Direktori Proyek
 ```
 Astalica/
